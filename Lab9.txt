@@ -1,0 +1,30 @@
+question 1
+
+part 1)
+B's constructor is invoked
+A's constructor is invoked
+
+part 2)
+b is an instance of A
+b is an instance of C
+
+part 3)
+AB
+
+part 4)
+Sum is 15
+
+part 5)
+b.j=1
+b.k=2
+
+
+
+s.j=4
+s.k=5
+
+
+
+ after b=s
+b.j=10 
+b.k=2
