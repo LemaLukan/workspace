@@ -1,0 +1,27 @@
+package a4;
+
+import java.util.Observable;
+
+import javax.swing.*;
+
+import java.awt.*;
+
+public class ObserveNamesAndAges extends Observable{
+	String name;
+	int age;
+	public ObserveNamesAndAges() {
+		
+	}
+	public void AddName(String name)
+	{
+		this.name = name;
+		this.setChanged();
+		this.notifyObservers(this.name);
+	}
+	public void AddAge(int age)
+	{
+		this.age = age;
+		this.setChanged();
+		this.notifyObservers(this.age);
+	}
+}

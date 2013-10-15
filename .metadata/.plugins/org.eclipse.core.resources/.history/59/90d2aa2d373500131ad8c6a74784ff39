@@ -1,0 +1,19 @@
+package a4;
+
+import java.util.Observable;
+
+import javax.swing.*;
+
+import java.awt.*;
+
+public class ObserverName extends Observable{
+	String name;
+	int Age;
+	public ObserverName() {
+		
+	}
+	public void AddName()
+	{
+		
+	}
+}

@@ -1,0 +1,14 @@
+package a4;
+
+import java.util.Observable;
+
+import javax.swing.*;
+
+import java.awt.*;
+
+public class ObserveNamesAndAges extends Observable{
+	private OutputFrame nameFrame, ageFrame;
+	public ObserveNamesAndAges(OutputFrame nameFrame, OutputFrame ageFrame) {
+		
+	}
+}

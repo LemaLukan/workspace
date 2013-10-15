@@ -1,0 +1,24 @@
+package a4;
+
+import java.util.Observable;
+
+import javax.swing.*;
+
+import java.awt.*;
+
+public class ObserveNamesAndAges {
+	ObservedName name;
+	ObservedAge age;
+	public ObserveNamesAndAges() {
+		
+	}
+	public ObservedName getNameObserver()
+	{
+		return this.name;
+	}
+
+	public ObservedAge getAgeObserver()
+	{
+		return this.age;
+	}
+}

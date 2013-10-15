@@ -1,0 +1,7 @@
+package a4;
+
+import java.util.Observable;
+
+public class ObservedAge extends Observable {
+
+}
