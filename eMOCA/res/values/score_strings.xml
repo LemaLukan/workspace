@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="surveyid">Please select a survey ID:</string>
+    <string name="select">Select</string>
+
+    <string name="surveyid_hint">Enter Survey ID Here</string>
+    <string name="vs_exec">1. Visuospatial / Executive Tests</string>
+    <string name="vs_exec_score">1. Visuospatial / Executive Tests</string>
+    <string name="clock_test">2. Clock Test</string>
+    <string name="node_test">Node Test</string>
+    <string name="cube_test">Cube Test</string>
+    <string name="contour">Contour</string>
+    <string name="numbers">Numbers</string>
+    <string name="hands">Hands (Ten past Eleven)</string>
+
+    <string name="naming">3. Naming Test</string>
+    <string name="naming_score">2. Naming Test</string>
+    <string name="lion">Lion</string>
+    <string name="rhino">Rhino</string>
+    <string name="camel">Camel</string>
+
+    <string name="attention1">5. Attention Test - Digits</string>
+    <string name="attention1_score">3. Attention Test - Digits</string>
+    <string name="forward">Forward Order (2 - 1 - 8 - 5 - 4)</string>
+    <string name="backward">Backward Order (7 - 4 - 2)</string>
+
+    <string name="tap_times">The letter A occurs at the following times (in seconds):</string>
+    <string name="tap_times_values">4 - 10 - 11 - 19 - 22 - 28 - 29 - 31 - 34 - 40 - 41  (11)</string>
+    <string name="user_tap_times">Times when tapped (in seconds)</string>
+    <string name="attention2">6. Attention Test - Letters</string>
+    <string name="attention2_score">4. Attention Test - Letters</string>
+    <string name="letterlist">Correct Tapping (less than 2 errors)</string>
+
+    <string name="attention3">7. Attention Test - Serial Subtraction</string>
+    <string name="attention3_score">5. Attention Test - Serial Subtraction</string>
+    <string name="sub93">93</string>
+    <string name="sub86">86</string>
+    <string name="sub79">79</string>
+    <string name="sub72">72</string>
+    <string name="sub65">65</string>
+
+
+    <string name="language1">8. Language Test - Sentences</string>
+    <string name="language1_score">6. Language Test - Sentences</string>
+    <string name="sentence1">Sentence 1 ("I only know that John is the one to help today.")</string>
+    <string name="sentence2">Sentence 2 ("The cat always hid under the couch when dogs were in the room.")</string>
+
+    <string name="language2">9. Language Test - Word List</string>
+    <string name="language2_score">7. Language Test - Word List</string>
+    <string name="words_11">11 Words or More?</string>
+    <string name="num_words"># of Words:</string>
+
+    <string name="abstraction">10. Abstraction Test</string>
+    <string name="abstraction_score">8. Abstraction Test</string>
+    <string name="abstraction_1">Abstraction 1 (Banana - Orange = Fruit)</string>
+    <string name="abstraction_2">Abstraction 2 (Train - Bicycle = Modes of Transportation)</string>
+    <string name="abstraction_3">Abstraction 3 (Watch - Ruler = Tools for Measurement)</string>
+
+    <string name="memory">4. Memory Test</string>
+    <string name="memory_1">Trial 1</string>
+    <string name="memory_2">Trial 2</string>
+
+    <string name="delayed">11. Delayed Recall Test</string>
+    <string name="delayed_score">9. Delayed Recall Test</string>
+    <string name="face">Face</string>
+    <string name="velvet">Velvet</string>
+    <string name="church">Church</string>
+    <string name="daisy">Daisy</string>
+    <string name="red">Red</string>
+
+    <string name="no_cue">No Cue</string>
+    <string name="cat_cue">12. Category Cue</string>
+    <string name="mcq_cue">13. Multiple Choice Cue</string>
+
+    <string name="orient">14. Orientation Test</string>
+    <string name="orient_score">10. Orientation Test</string>
+    <string name="orient_p1">Day</string>
+    <string name="orient_p2">Month</string>
+    <string name="orient_p3">Year</string>
+    <string name="orient_p4">Date</string>
+    <string name="orient_p5">Place</string>
+    <string name="orient_p6">City</string>
+
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="bonus">11. Education Bonus</string>
+    <string name="total_score">Total Score</string>
+
+
+
+
+</resources>

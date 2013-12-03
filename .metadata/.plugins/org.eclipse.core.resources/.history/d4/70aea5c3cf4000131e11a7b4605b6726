@@ -1,0 +1,13 @@
+package proj;
+
+public class SquareFactory extends ShapeFactory {
+
+	public SquareFactory()
+	{
+		
+	}
+	public SquareFactory(String shape) throws Exception {
+		super(shape);
+	}
+
+}

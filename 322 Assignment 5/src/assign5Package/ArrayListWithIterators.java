@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class ArrayListWithIterators extends AbstractList {
 	
-	private ArrayList<Integer> table;
-	private int numElementsInTable = 0;
+	private ArrayList<tester> table;
+	private int numElements = 0;
 	
 	@Override
 	public AbstractIterator createIterator(int numElements) {
@@ -14,31 +14,28 @@ public class ArrayListWithIterators extends AbstractList {
 
 	@Override
 	public void append(int v) {
-		if (numElementsInTable == 0)
+		if (numElements == 0)
 		{
-			table.add(0, v);
-			System.out.println("table.get0 = " + table.get(0));
-			++numElementsInTable;
+			table.add(0, new tester(v));
+			++numElements;
 		}
 		else
 		{
-			if (table.get(numElementsInTable-1).compareTo(v) >= 0	)
+			if (table.get(numElements-1).getVal() >= v)
 			{
-				table.add(v);
-				++numElementsInTable;
-				System.out.println("table.get(last) = " + table.get(numElementsInTable-1));
+				table.add(new tester(v));
+				++numElements;
 			}
 			else
 			{
-				for (int i = 0; i < numElementsInTable; i++)
+				for (int i = 0; i < numElements; i++)
 				{
-					if (table.get(i) < v)
+					if (table.get(i).getVal() < v)
 					{
-						table.add(i, v);
-						++numElementsInTable;
+						table.add(i, new tester(v));
+						++numElements;
+						break;
 					}
-					for (int j = 0; j < numElementsInTable; ++j)
-						System.out.println("table.get(j) = " + table.get(j));
 				}
 			}
 		}
@@ -46,49 +43,39 @@ public class ArrayListWithIterators extends AbstractList {
 	
 	public ArrayListWithIterators()
 	{
-		table = new ArrayList<Integer>(100);
+		table = new ArrayList<tester>();
 	}
 	
-	public class Iterator extends AbstractIterator
+	public class Iterator extends AbstractIterator implements MyIterator
 	{
-		private ArrayList<Integer> result;
+		private ArrayList<tester> result;
 		private int currentElement;
-		private int numElementsInResult = 0; // Stores the number of elements in result
-		private boolean endOfTable;
 		
 		public Iterator(int n)
 		{
-			result = new ArrayList<Integer>(n); // result stores the array to be returned
-			for (int i = 0; i < numElementsInTable && i < n; i++){
+			result = new ArrayList<tester>(); // result stores the array to be returned
+			for (int i = 0; i < numElements && i < n; i++){
 				result.add(table.get(i));
-				++numElementsInResult;
 			}
 		}
 
 		@Override
 		public void first() {
 			currentElement = 0;
-			if (numElementsInResult > 0) 
-				endOfTable = false;
-			else 
-				endOfTable = true;
 		}
 
 		@Override
 		public void next() {
-			if (currentElement < numElementsInResult - 1)
 				currentElement++;
-			else 
-				endOfTable = true;
 		}
 		
 		@Override
 		public boolean isDone() {
-			return endOfTable;
+			return currentElement >= result.size();
 		}
 
 		@Override
-		public Integer currentItem() {
+		public tester currentItem() {
 			return result.get(currentElement);
 		}
 		

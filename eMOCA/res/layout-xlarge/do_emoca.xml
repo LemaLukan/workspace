@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scroller"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_gradient">
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+        <include layout="@layout/header" />
+
+        <include layout="@layout/title" />
+
+        <LinearLayout
+                style="@style/content_margins"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                    style="@style/paragraph"
+                    android:text="@string/start_p1">
+            </TextView>
+            <TextView
+                    style="@style/paragraph"
+                    android:text="@string/start_p2">
+            </TextView>
+            <TextView
+                    style="@style/paragraph"
+                    android:text="@string/start_p3">
+            </TextView>
+            <TextView
+                    style="@style/paragraph"
+                    android:text="@string/start_p4">
+            </TextView>
+            <TextView
+                    style="@style/paragraph"
+                    android:text="@string/start_p5">
+            </TextView>
+
+            <LinearLayout
+                    style="@style/gray_box_layout"
+                    >
+
+                <LinearLayout
+                        style="@style/gray_box_contain_6"
+                        >
+                    <TextView
+                            android:text="@string/start_your_name"
+                            style="@style/gray_box_text"
+                        />
+                    <EditText
+                            android:id="@+id/editText0_1"
+                            android:hint="@string/name_hint"
+                            style="@style/gray_box_edit"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                        style="@style/gray_box_contain_4"
+                        >
+                    <TextView
+                            android:text="@string/start_your_location"
+                            style="@style/gray_box_text"
+                        />
+                    <EditText
+                            android:id="@+id/editText0_2"
+                            android:hint="@string/location_hint"
+                            style="@style/gray_box_edit"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                    android:layout_gravity="center"
+                    style="@style/start_button"
+                    android:id="@+id/button1"
+                    android:onClick="startTest"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

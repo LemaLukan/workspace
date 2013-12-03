@@ -1,0 +1,9 @@
+package proj;
+
+public class RectangleFactory extends ShapeFactory {
+
+	public RectangleFactory(String shape) {
+		super(shape);
+	}
+
+}

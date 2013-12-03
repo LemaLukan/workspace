@@ -1,0 +1,9 @@
+package proj;
+
+public class CircleFactory extends ShapeFactory {
+
+	public CircleFactory(String shape) {
+		super(shape);
+	}
+
+}

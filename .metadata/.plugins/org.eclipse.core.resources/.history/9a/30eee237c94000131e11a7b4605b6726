@@ -1,0 +1,5 @@
+package proj;
+
+public class RectangleFactory extends ShapeFactory {
+
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+
+    <TextView
+            style="@style/large_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:textColor="@color/black"
+            android:id="@+id/message" />
+
+    <LinearLayout
+            android:background="@drawable/dialog_gradient"
+            android:weightSum="1"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent">
+        <Button
+                android:text="@string/yes"
+                style="@style/dialog_button"
+                android:layout_weight=".5"
+                android:id="@+id/ok_button">
+        </Button>
+        <Button
+                android:text="@string/no"
+                style="@style/dialog_button"
+                android:layout_weight=".5"
+                android:id="@+id/cancel_button">
+        </Button>
+    </LinearLayout>
+</LinearLayout>

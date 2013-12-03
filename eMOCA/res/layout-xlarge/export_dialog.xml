@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:background="@drawable/background_gradient">
+
+    <TextView
+            style="@style/large_text"
+            android:layout_width="wrap_content"
+            android:id="@+id/dialogText1"
+            android:layout_height="wrap_content"
+            android:text="@string/exportDialog1"
+            android:paddingBottom="15dp">
+    </TextView>
+
+    <EditText
+            style="@style/large_text"
+            android:id="@+id/editTextDialog"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="@string/name_hint">
+        <requestFocus></requestFocus>
+    </EditText>
+    <TextView
+            style="@style/large_text"
+            android:layout_width="wrap_content"
+            android:textColor="#FFFF0000"
+            android:id="@+id/dialogText2"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:visibility="invisible"
+            android:text="@string/exportDialogError">
+    </TextView>
+
+    <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <Button
+                style="@style/large_text"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:id="@+id/ok_button"
+                android:layout_width="wrap_content"
+                android:text="@string/submit">
+        </Button>
+        <Button android:layout_height="wrap_content"
+                style="@style/large_text"
+                android:text="@string/cancel"
+                android:id="@+id/cancel_button"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@+id/ok_button"
+                android:layout_alignTop="@+id/ok_button"
+                android:layout_alignBottom="@+id/ok_button">
+        </Button>
+    </RelativeLayout>
+
+</LinearLayout>

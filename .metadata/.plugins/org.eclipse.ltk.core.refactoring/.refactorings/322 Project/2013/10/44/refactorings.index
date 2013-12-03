@@ -1,0 +1,12 @@
+1383061700154	Move folder
+1383061717728	Delete element
+1383062110732	Encapsulate field 'referencePoint'
+1383062164127	Encapsulate field 'shapeSelected'
+1383062198713	Encapsulate field 'lastMousePosition'
+1383062456389	Encapsulate field 'colorCircle'
+1383062800897	Rename method 'getColorCircle'
+1383062812530	Rename method 'setColorCircle'
+1383063001990	Rename method 'shapeIsSelected'
+1383074674881	Delete element
+1383074683625	Delete element
+1383074691614	Delete element

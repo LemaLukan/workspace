@@ -1,0 +1,13 @@
+package proj;
+
+import java.util.ArrayList;
+
+public abstract class AbstractList {
+	abstract boolean add(Shape a);
+	abstract AbstractIterator createCircleIterator();
+	abstract class AbstractIterator implements Iterator{
+	}
+	abstract int size();
+	abstract Shape get(int index);
+	abstract Shape remove(int index);
+}

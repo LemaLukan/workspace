@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.main"
+    android:installLocation="auto"
+    android:versionCode="3"
+    android:versionName="1.0.3" >
+
+    <!-- Requires 8 for Large Screen Support! -->
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="8" />
+
+    <application
+        android:debuggable="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <activity
+            android:name="com.android.main.eMOCA"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.android.main.Quest"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateVisible|adjustPan"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.QTBridge"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.WelcomeScreen"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Instructions1"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Instructions2"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Instructions3"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Scoring"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.MarkingElectronic"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.EndScore"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test1"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test2"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test3"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test4"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test5"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test6"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test7"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test8"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test9"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test10"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test11"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test12"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test13"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test14"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test15"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test16"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test17"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test18"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test19"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test20"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test21"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test22"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test23"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test24"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test25"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test26"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test27"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test28"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test29"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test30"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test31"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test32"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test33"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test34"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test35"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Test36"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.TestEnd"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.TestEndCancel"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.Manager"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.About"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+        <activity
+            android:name="com.android.main.MarkSplashScreen"
+            android:configChanges="orientation"
+            android:label="@string/app"
+            android:screenOrientation="landscape"
+            android:theme="@style/theme" >
+        </activity>
+    </application>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+</manifest>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">My First App</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="yes">Yes</string>
+	<string name="no">No</string>
+	<string name="maybe">Maybe</string>
+	<string name="next_question">Next Question</string>
+</resources>

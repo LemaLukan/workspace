@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;a6.AssembledPart.partList&apos; in &apos;a6.AssembledPart&apos;&#x0A;- Original project: &apos;322 Assignment 6&apos;&#x0A;- Original element: &apos;a6.AssembledPart.partList&apos;&#x0A;- Getter method name: &apos;getPartList&apos;&#x0A;- Setter method name: &apos;addPartList&apos;&#x0A;- Field visibility: &apos;public&apos;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;partList&apos;" flags="589830" getter="getPartList" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;a6{AssembledPart.java[AssembledPart^partList" insertion="0" setter="addPartList" stamp="1382921043835" version="1.0" visibility="1"/>
+</session>

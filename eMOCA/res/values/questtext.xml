@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Administrator Data -->
+    <string name="test_data">Real Subject - These responses will be analyzed for publication.</string>
+    <string name="quest0a1">Name of Test Administrator</string>
+    <string name="name_hint">Full Name (First Last)</string>
+    <string name="quest0a2">Location of Clinic</string>
+    <string name="location_hint">Full Address (e.g. 555 Front St., Toronto, Ontario, Canada N1N 5A5)</string>
+
+    <!-- Questions -->
+    <string name="quest1">1. Tell me about any of your close relatives (parents, brothers, sisters, or children) that have suffered from any of the following conditions. Please check all that apply.</string>
+    <string name="quest2">2. Tell me about any of your diagnoses or symptoms of any of the following. Please check all that apply.</string>
+    <string name="quest3">3. Please indicate if you are taking any medications for the following conditions and how long you have been taken medications? Please check all that apply. </string>
+    <string name="quest4">4. How many drinks of alcohol on average per week do you consume? (glass of wine, or 12 oz beer, or 1 oz liquor = one drink).</string>
+    <string name="quest5">5. Are you a current smoker?</string>
+    <string name="quest6">6. If you are a current smoker or have smoked in the past how many cigarettes per day do you or did you smoke?</string>
+    <string name="quest7">7. How many years have you or did you smoke?</string>
+    <string name="quest8">8. How many times per week, for at least twenty minutes per activity, do you take part in moderate physical activity for work, around the house or sports? Examples of moderate physical activities are delivering mail, house painting, making deliveries, lifting and carrying light objects, raking the lawn, volleyball, ping-pong, bowling, brisk walking.</string>
+    <string name="quest9">9. How many times per week, for at least twenty minutes per activity, do you take part in strenuous physical activity that cause sweating or breathlessness?</string>
+    <string name="quest10">10. I am going to make a statement about you. Tell me how strongly you agree or disagree with the following: Your memory has changed significantly from a year ago.</string>
+    <string name="quest11">11. I am going to make another statement about you. Tell me how strongly you agree or disagree with the following: There have been significant changes in your ability to handle money from a year ago.</string>
+    <string name="quest12">12. I am going to make another statement about you. Tell me how strongly you agree or disagree with the following: There have been significant changes in your ability to play games of skill from a year ago such as chess, checkers, crossword puzzles, backgammon, bingo etc.</string>
+    <string name="quest13a">13A. Over the last two weeks I have felt cheerful and in good spirits:</string>
+    <string name="quest13b">13B. Over the last two weeks I have felt active and vigorous:</string>
+    <string name="quest14">14. What is your year of birth?</string>
+    <string name="quest15">15. Sex</string>
+    <string name="quest16">16. Marital Status</string>
+    <string name="quest17">17. Race/Ethnicity</string>
+    <string name="quest18">18. Yearly Household Income</string>
+    <string name="quest19">19. Highest Level of education completed</string>
+    <string name="quest20">20. Employment Status</string>
+    <string name="quest21">21. What is your weight?</string>
+    <string name="quest22">22. What is your height?</string>
+    <string name="quest23">23. How often have you used previously used a computer, Smartphone, personal digital assistant or similar devices</string>
+    <string name="quest24">24. Have you taken the Montreal Cognitive Assessment in the last thirty days?</string>
+
+    <!-- Response Text -->
+
+    <!-- Shared -->
+    <string name="other">Other?</string>
+    <string name="no_answer">Choose Not to Answer</string>
+
+    <!--  Q5 & 24 -->
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <!--  Q23 -->
+    <string name="never">Never</string>
+    <string name="rarely">Rarely</string>
+    <string name="sometimes">Sometimes</string>
+    <string name="frequently">Frequently</string>
+
+    <!-- Q10, 11, 12 -->
+    <string name="strongly_disagree">Strongly Disagree</string>
+    <string name="disagree">Disagree</string>
+    <string name="agree_disagree">Neither Agree nor Disagree</string>
+    <string name="agree">Agree</string>
+    <string name="strongly_agree">Strongly Agree</string>
+
+    <!-- Unique -->
+    <!-- Q1 & 2 -->
+    <string name="q1_2a1">Heart disease (coronary, congestive heart failure, peripheral vascular disease, atrial fibrillation, left ventricular hypertrophy).</string>
+    <string name="q1_2a2">Alzheimer’s disease</string>
+    <string name="q1_2a3">Senile dementia</string>
+    <string name="q1_2a4">Arteriosclerosis (hardening of arteries)</string>
+    <string name="q1_2a5">Depression</string>
+    <string name="q1_2a6">Stroke</string>
+    <string name="q1_2a7">High Blood Pressure</string>
+    <string name="q1_2a8">Diabetes</string>
+    <string name="q1_2a9">High Cholesterol</string>
+    <string name="q1_2a10">Head Trauma</string>
+    <string name="other1">Other Conditions?</string>
+
+    <!-- Q3 -->
+    <string name="q3a1">Diabetes pills</string>
+    <string name="q3a2">Insulin for diabetes</string>
+    <string name="q3a3">Blood pressure medication</string>
+    <string name="q3a4">Depression or anxiety</string>
+    <string name="q3a5">Cholesterol lowering medication</string>
+    <string name="q3a6">Sleeping Pills</string>
+    <string name="other2">Other Medications?</string>
+    <string name="num_years">Number of years taken</string>
+
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+
+    <!-- Q13 -->
+    <string name="time1">All of the time</string>
+    <string name="time2">Most of the time</string>
+    <string name="time3">More than half the time</string>
+    <string name="time4">Less than half the time</string>
+    <string name="time5">Some of the time</string>
+    <string name="time6">At no time</string>
+
+    <!-- Q16 -->
+    <string name="q16a1">Single</string>
+    <string name="q16a2">Married/Common Law</string>
+    <string name="q16a3">Separated/Divorced</string>
+    <string name="q16a4">Widowed</string>
+
+    <!-- Q17 -->
+    <string name="q17a1">Caucasian</string>
+    <string name="q17a2">Native Canadian</string>
+    <string name="q17a3">African Canadian</string>
+    <string name="q17a4">Asian</string>
+    <string name="q17a5">Arabic</string>
+    <string name="q17a6">Hispanic</string>
+    <string name="q17a7">East Indian</string>
+
+    <!-- Q18 -->
+    <string name="q18a1">Under $20,000</string>
+    <string name="q18a2">$20,001 – 40,000</string>
+    <string name="q18a3">$40,001 – 60,000</string>
+    <string name="q18a4">$60,000 – 80,000</string>
+    <string name="q18a5">Over $80,000</string>
+
+    <!-- Q19 -->
+    <string name="q19a1">Grade School</string>
+    <string name="q19a2">Some High School</string>
+    <string name="q19a3">High School Graduate</string>
+    <string name="q19a4">Some Post-High School</string>
+    <string name="q19a5">College Diploma/Certificate</string>
+    <string name="q19a6">University Degree</string>
+
+    <!-- Q20 -->
+    <string name="q20a1">Currently employed full-time</string>
+    <string name="q20a2">Currently employed part-time</string>
+    <string name="q20a3">Self-employed full-time</string>
+    <string name="q20a4">Self-employed part-time</string>
+    <string name="q20a5">Student</string>
+    <string name="q20a6">Stay at home family worker</string>
+    <string name="q20a7">Retired</string>
+    <string name="q20a8">Not currently employed</string>
+
+</resources>

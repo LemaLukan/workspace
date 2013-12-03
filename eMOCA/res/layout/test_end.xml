@@ -1,0 +1,80 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scroller"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_gradient">
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+
+        <include layout="@layout/header" />
+
+        <include layout="@layout/title" />
+
+        <LinearLayout
+                style="@style/content_margins"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <TextView
+                    style="@style/paragraph"
+                    android:text="@string/end_p1">
+            </TextView>
+            <TextView
+                    style="@style/paragraph"
+                    android:text="@string/end_p2">
+            </TextView>
+            <TextView
+                    style="@style/paragraph"
+                    android:text="@string/end_p3">
+            </TextView>
+            <TextView
+                    style="@style/paragraph"
+                    android:text="@string/end_p4">
+            </TextView>
+            <TextView
+                    android:id="@+id/textView_file_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/file_name_label"
+                    android:textSize="15sp"
+                    android:paddingTop="10dip"
+                    android:paddingBottom="10dip">
+            </TextView>
+            <EditText
+                    android:id="@+id/editText_file_name"
+                    android:hint="@string/file_name_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true">
+            </EditText>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                <ImageView
+                        style="@style/exit_button"
+                        android:src="@drawable/btn_main_final"
+                        android:id="@+id/button2"
+                        android:onClick="exitTest"
+                        android:layout_gravity="center"
+                    />
+
+                <ImageView
+                        style="@style/exit_button"
+                        android:src="@drawable/btn_exit_final"
+                        android:id="@+id/button1"
+                        android:onClick="exitApp"
+                        android:layout_gravity="center"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

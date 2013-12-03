@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@drawable/background_gradient">
+
+    <include layout="@layout/header" />
+
+    <include layout="@layout/title" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingLeft="100dip"
+            android:paddingRight="100dip">
+        <TextView
+                style="@style/paragraph"
+                android:text="@string/marking_p1">
+        </TextView>
+        <TextView
+                style="@style/paragraph"
+                android:text="@string/marking_p2">
+        </TextView>
+        <TextView
+                style="@style/paragraph"
+                android:text="@string/marking_p3">
+        </TextView>
+        <ImageView
+                android:layout_gravity="center"
+                style="@style/start_button"
+                android:id="@+id/startMarking"
+                android:onClick="startMarking"
+            />
+    </LinearLayout>
+
+</LinearLayout>

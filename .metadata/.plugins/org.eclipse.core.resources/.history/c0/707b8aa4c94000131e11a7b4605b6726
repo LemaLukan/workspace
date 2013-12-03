@@ -1,0 +1,9 @@
+package proj;
+
+public class SquareFactory extends ShapeFactory {
+
+	public SquareFactory(String shape) {
+		super(shape);
+	}
+
+}

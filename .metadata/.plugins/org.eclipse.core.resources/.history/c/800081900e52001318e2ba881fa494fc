@@ -1,0 +1,33 @@
+package proj;
+
+import java.util.ArrayList;
+
+
+public class MySquareAndRectangleArrayListWithIterator  {
+	private ArrayList<Shape> myShapes;
+	
+	public MySquareAndRectangleArrayListWithIterator()
+	{
+		myShapes = new ArrayList<Shape>();
+	}
+	boolean add(Shape a) {
+		return myShapes.add(a);
+	}
+	@Override
+	AbstractIterator createIterator() {
+		return new MyIterator(myShapes);
+	}
+	@Override
+	int size() {
+		return myShapes.size();
+	}
+	@Override
+	Shape get(int index) {
+		return myShapes.get(index);
+	}
+	public Shape remove(int index)
+	{
+		return myShapes.remove(index);
+	}
+	
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@drawable/background_gradient">
+
+    <include layout="@layout/header" />
+
+    <include layout="@layout/title" />
+
+    <RelativeLayout
+            style="@style/content_margins"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <Button
+                style="@style/large_text"
+                android:layout_alignParentTop="true"
+                android:id="@+id/button1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/replay"
+                android:layout_alignParentLeft="true"
+                android:onClick="replayInst"
+                android:background="@drawable/small_button"
+            />
+
+        <Button
+                style="@style/large_text"
+                android:layout_alignParentTop="true"
+                android:id="@+id/button2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/gotonext"
+                android:onClick="nextTest"
+                android:background="@drawable/small_button"
+            />
+
+        <view class="com.android.main.AudioBar"
+                android:id="@+id/ampText"
+                style="@style/audio_bar"
+                android:layout_toLeftOf="@+id/imageView1"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="30dip"
+                >
+        </view>
+
+        <TextView
+                style="@style/large_text"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/readyText"
+                android:layout_above="@+id/imageView1"
+                android:textSize="19sp"
+                android:text="@string/when_ready"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="45dp"
+                android:visibility="invisible">
+        </TextView>
+
+        <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/camel"
+                android:id="@+id/imageView1"
+                android:layout_centerInParent="true">
+        </ImageView>
+
+    </RelativeLayout>
+</LinearLayout>

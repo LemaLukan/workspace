@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@drawable/background_gradient">
+
+    <include layout="@layout/header" />
+
+    <include layout="@layout/title" />
+
+    <RelativeLayout
+            style="@style/content_margins"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+                style="@style/exit_button"
+                android:src="@drawable/btn_exit_final"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/button1"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:onClick="exitTest"
+            />
+
+        <TextView
+                android:id="@+id/textView2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/textView1"
+                android:layout_alignLeft="@+id/textView1"
+                android:text="@string/cancel_end_emoca_label">
+        </TextView>
+        <!-- <TextView
+              android:id="@+id/testView"
+              android:layout_height="wrap_content"
+              android:text="TextView"
+              android:layout_width="wrap_content"
+              android:layout_alignParentLeft="true">
+      </TextView>-->
+
+    </RelativeLayout>
+</LinearLayout>

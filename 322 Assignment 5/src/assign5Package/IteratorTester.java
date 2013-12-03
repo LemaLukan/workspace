@@ -14,10 +14,26 @@ public class IteratorTester {
 	    }
 	    myIterator = myCollection.createIterator(10);
 	    myIterator.first();
+	    System.out.println("Print the entire list to see.");
 	    while (!myIterator.isDone()){
-	       System.out.println(myIterator.currentItem().toString() + "\n");
+	       System.out.println(myIterator.currentItem().toString());
+	       myIterator.next();
+	    }
+	    System.out.println("only 4 will be changed to the value 3");
+	    myIterator = myCollection.createIterator(4);
+	    myIterator.first();
+	    while (!myIterator.isDone()){
+	       System.out.println(myIterator.currentItem().toString());
+	       Integer a = 3;
+	       myIterator.currentItem().setVal(a);
+	       myIterator.next();
+	    }
+	    System.out.println("Final, note how the first 4 has changed");
+	    myIterator = myCollection.createIterator(10);
+	    myIterator.first();
+	    while (!myIterator.isDone()){
+	       System.out.println(myIterator.currentItem().toString());
 	       myIterator.next();
 	    }
 	  }
-
 }

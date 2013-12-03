@@ -1,0 +1,31 @@
+package proj;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+import javax.swing.JTextField;
+
+public class ShapeFactory {
+	
+	
+	public Shape createShape(String shape) throws Exception
+	{
+		if (shape.compareTo("rectangle") == 0)
+		{
+			return new Rectangle();
+		}
+		else if (shape.compareTo("circle") == 0)
+		{
+			return new Circle();
+		}
+		else if (shape.compareTo("square") == 0)
+		{
+			return new Square();
+		}
+		else
+		{
+			throw new Exception("Unknown shape type");
+		}
+	}
+	public abstract void handlePhases(JTextField messageArea, int currentPhase, Shape toBeHandled);
+}

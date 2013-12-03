@@ -1,0 +1,24 @@
+package proj;
+
+public class ShapeFactory {
+	private ShapeFactory a;
+	public ShapeFactory(String shape)
+	{
+		if (shape.compareTo("RECTANGLE") == 0)
+		{
+			a = new RectangleFactory();
+		}
+		else if (shape.compareTo("CIRCLE") == 0)
+		{
+			a = new CircleFactory();
+		}
+		else if (shape.compareTo("SQUARE") == 0)
+		{
+			a = new SquareFactory();
+		}
+		else
+		{
+			throw new Exception("unknown type of shape");
+		}
+	}
+}

@@ -1,7 +1,0 @@
-package a4;
-
-import java.util.Observable;
-
-public class ObservedName extends Observable {
-
-}

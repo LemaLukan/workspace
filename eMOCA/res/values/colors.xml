@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="light_purple">#8B4CBB</color>
+    <color name="dark_purple">#6F09BE</color>
+    <color name="dark_green">#1C6B5A</color>
+    <color name="light_green">#05A684</color>
+    <color name="underbar">#C4C4C4</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="trans_black">#35000000</color>
+    <color name="trans_black_font">#55000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="light_gray">#E5E5E5</color>
+    <color name="dot_gray">#8A8A8A</color>
+    <color name="bk_gradient_start">#FFFFFF</color>
+    <color name="bk_gradient_end">#E6E9FF</color>
+    <color name="bk_gradient_fix">#E7EAFF</color>
+    <color name="button_gray_start">#D4D4D4</color>
+    <color name="button_gray_end">#F9F9F9</color>
+    <color name="button_border">#E1E1E1</color>
+</resources>

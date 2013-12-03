@@ -1,4 +1,4 @@
-package assign5Package;
+/*package assign5Package;
 
 
 
@@ -63,7 +63,7 @@ public class NewArrayOfIntWithIterator extends AbstractList {
 
 		public Iterator(int n){
 			result = new Integer[n]; // result stores the array to be returned
-			int numElements = 0; // This stores the number of elements in the array
+			//int numElements = 0; // This stores the number of elements in the array
 
 			for (int i = 0; i < numElementsInTable; i++){
 				insertSort(table[i], result);
@@ -99,4 +99,4 @@ public class NewArrayOfIntWithIterator extends AbstractList {
 
 
 
-}
+}*/

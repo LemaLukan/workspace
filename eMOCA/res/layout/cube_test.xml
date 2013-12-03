@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@drawable/background_gradient">
+
+    <include layout="@layout/header" />
+
+    <include layout="@layout/title" />
+
+    <RelativeLayout
+            style="@style/content_margins"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ImageView
+                android:src="@drawable/cube"
+                android:id="@+id/imageView1"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="60dip"
+            />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/imageView1"
+                android:text="@string/cube_label"
+                android:textSize="14sp"
+            />
+
+        <view class="com.android.main.CanvasDrawing"
+                android:id="@+id/cd"
+                android:layout_below="@+id/imageView1"
+                android:layout_centerHorizontal="true"
+                android:layout_width="412dp"
+                android:layout_height="337dp"
+            />
+
+        <Button android:layout_alignParentTop="true"
+                android:id="@+id/button1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/replay"
+                android:layout_alignParentLeft="true"
+                android:onClick="replayInst"
+                android:background="@drawable/small_button"
+            />
+
+        <Button
+                android:layout_alignParentTop="true"
+                android:id="@+id/button2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/gotonext"
+                android:onClick="nextTest"
+                android:background="@drawable/small_button"
+            />
+    </RelativeLayout>
+</LinearLayout>

@@ -7,6 +7,6 @@ public interface MyIterator {
 
 	public boolean isDone();// isDone is true  when the current item has gone past the last item
 
-    public Integer currentItem(); // currentItem retrieves the value in current item
+    public tester currentItem(); // currentItem retrieves the value in current item
 
 }
