@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.*;
+import java.util.regex.Pattern;
 
 
 public class A12 {
@@ -21,6 +22,7 @@ public class A12 {
         	}
         	totalLine += line;
         }
+        // \\b[a-zA-Z][a-zA-Z0-9]*\\b
         for (String a : totalLine.split("\\s+|\\*|\\+|\\(|\\)|,|;|-|/|:|=|!"))
         {
         	if (!keywords.contains(a) && !a.equals(""))

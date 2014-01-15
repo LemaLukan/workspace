@@ -7,7 +7,7 @@ BEGIN
   you are not required to check the syntax of the program; 
      so all these words are identifiers;
   except "quoted" strings and keywords; 
-  
+
   to check how many lines and words I have;
      type "wc A2.input" in "luna.cs";
      your number of characters and lines may vary from sample output, 

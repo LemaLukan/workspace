@@ -5,34 +5,34 @@ import java.util.*;
 public class A11 {
 
 	public static void main(String[] args) throws IOException {
-		List<String> keywords = Arrays.asList("IF", "ELSE", "WRITE", "READ", "RETURN", "BEGIN", "END", "MAIN", "INT", "REAL");
-		String line = "", totalLine = "";
-		HashSet<String> wordsFound = new HashSet<String>();
-		BufferedReader read = new BufferedReader(new FileReader(args[0]));
-        BufferedWriter write = new BufferedWriter(new FileWriter("A1.output"));
-        while ((line = read.readLine()) != null)
+		List<String> $ = Arrays.asList("IF", "ELSE", "WRITE", "READ", "RETURN", "BEGIN", "END", "MAIN", "INT", "REAL");
+		String _ = "", __ = "";
+		HashSet<String> $$ = new HashSet<String>();
+		BufferedReader ___ = new BufferedReader(new FileReader(args[0]));
+        BufferedWriter ____ = new BufferedWriter(new FileWriter("A1.output"));
+        while ((_ = ___.readLine()) != null)
         {
-        	if (line.contains("\""))
+        	if (_.contains("\""))
         	{
-        		int firstIndex = line.indexOf("\"");
-        		int LastIndex = line.lastIndexOf("\"");
-        		int length = line.length();
-        		line = line.substring(0, firstIndex-1) + line.substring(LastIndex+1, length);
+        		int $$$ = _.indexOf("\"");
+        		int $$$$ = _.lastIndexOf("\"");
+        		int $$$$$ = _.length();
+        		_ = _.substring(0, $$$-1) + _.substring($$$$+1, $$$$$);
         	}
-        	totalLine += line;
+        	__ += _;
         }
-        StringTokenizer st = new StringTokenizer(totalLine, " \t\n(),;+-*/:=!");
-        while (st.hasMoreElements())
+        StringTokenizer ______ = new StringTokenizer(__, " \t\n(),;+-*/:=!");
+        while (______.hasMoreElements())
         {
-        	line = st.nextToken();
-        	if (!keywords.contains(line))
+        	_ = ______.nextToken();
+        	if (!$.contains(_))
         	{
-        		Character.isLetter(line.charAt(0));
-        		wordsFound.add(line);
+        		Character.isLetter(_.charAt(0));
+        		$$.add(_);
         	}
         }
-        write.append("identifiers:"+wordsFound.size());
-        write.close();
-        read.close();
+        ____.append("identifiers:"+$$.size());
+        ____.close();
+        ___.close();
 	}
 }
