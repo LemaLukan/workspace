@@ -1,7 +1,6 @@
 import java.io.*;
 import java.util.*;
 
-
 public class A11 {
 
 	public static void main(String[] args) throws IOException {
@@ -25,14 +24,12 @@ public class A11 {
         while (______.hasMoreElements())
         {
         	_ = ______.nextToken();
-        	if (!$.contains(_))
+        	if (!$.contains(_) && Character.isLetter(_.charAt(0)))
         	{
-        		Character.isLetter(_.charAt(0));
         		$$.add(_);
         	}
         }
         ____.append("identifiers:"+$$.size());
         ____.close();
-        ___.close();
 	}
 }

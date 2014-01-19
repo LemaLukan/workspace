@@ -1,38 +1,30 @@
 import java.io.*;
 import java.util.*;
-import java.util.regex.Pattern;
-
+import java.util.regex.*;
 
 public class A12 {
 
 	public static void main(String[] args) throws IOException {
-		List<String> keywords = Arrays.asList("IF", "ELSE", "WRITE", "READ", "RETURN", "BEGIN", "END", "MAIN", "INT", "REAL");
-		String line = "", totalLine = "";
-		HashSet<String> wordsFound = new HashSet<String>();
-		BufferedReader read = new BufferedReader(new FileReader(args[0]));
-        BufferedWriter write = new BufferedWriter(new FileWriter("A1.output"));
-        while ((line = read.readLine()) != null)
+		List $ = Arrays.asList("IF", "ELSE", "WRITE", "READ", "RETURN", "BEGIN", "END", "MAIN", "INT", "REAL");
+		String _ = "", __ = "";
+		HashSet $$$$ = new HashSet();
+		BufferedReader $$ = new BufferedReader(new FileReader(args[0]));
+        BufferedWriter $$$ = new BufferedWriter(new FileWriter("A1.output"));
+        while ((_ = $$.readLine()) != null)
         {
-        	if (line.contains("\""))
-        	{
-        		int firstIndex = line.indexOf("\"");
-        		int LastIndex = line.lastIndexOf("\"");
-        		int length = line.length();
-        		line = line.substring(0, firstIndex-1) + line.substring(LastIndex+1, length);
-        	}
-        	totalLine += line;
+        	__ += _;
         }
-        // \\b[a-zA-Z][a-zA-Z0-9]*\\b
-        for (String a : totalLine.split("\\s+|\\*|\\+|\\(|\\)|,|;|-|/|:|=|!"))
+        __ = __.replaceAll("\".*\"", "");
+        Pattern ___ = Pattern.compile("\\b[a-zA-Z][a-zA-Z0-9]*");
+        Matcher ____ = ___.matcher(__);
+        while (____.find())
         {
-        	if (!keywords.contains(a) && !a.equals(""))
-        	{
-        		Character.isLetter(a.charAt(0));
-        		wordsFound.add(a);
+        	_ = ____.group();
+        	if (!$.contains(_))
+        	{	$$$$.add(_);
         	}
         }
-        write.append("identifiers:"+wordsFound.size());
-        write.close();
-        read.close();
+        $$$.append("identifiers:"+$$$$.size());
+        $$$.close();
 	}
 }

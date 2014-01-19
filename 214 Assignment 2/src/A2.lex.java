@@ -1,7 +1,7 @@
 import java.io.*;
 
 
-class A2 {
+class $$$$$$$ {
 	private final int YY_BUFFER_SIZE = 512;
 	private final int YY_F = -1;
 	private final int YY_NO_STATE = -1;
@@ -12,11 +12,11 @@ class A2 {
 	private final int YY_BOL = 128;
 	private final int YY_EOF = 129;
     		
-int quotes,keywords, numbers, id, lines;
+int _,__, ___, ____;
 public static void main(String argv[]) throws java.io.IOException {
-BufferedReader read = new BufferedReader(new FileReader("A2.input"));
-A2 yy = new A2(read);
-yy.yylex();
+BufferedReader $$$$$$ = new BufferedReader(new FileReader("A2.input"));
+$$$$$$$ _____ = new $$$$$$$($$$$$$);
+_____.yylex();
 }
 	private java.io.BufferedReader yy_reader;
 	private int yy_buffer_index;
@@ -28,7 +28,7 @@ yy.yylex();
 	private boolean yy_at_bol;
 	private int yy_lexical_state;
 
-	A2 (java.io.Reader reader) {
+	$$$$$$$ (java.io.Reader reader) {
 		this ();
 		if (null == reader) {
 			throw (new Error("Error: Bad input stream initializer."));
@@ -36,7 +36,7 @@ yy.yylex();
 		yy_reader = new java.io.BufferedReader(reader);
 	}
 
-	A2 (java.io.InputStream instream) {
+	$$$$$$$ (java.io.InputStream instream) {
 		this ();
 		if (null == instream) {
 			throw (new Error("Error: Bad input stream initializer."));
@@ -44,7 +44,7 @@ yy.yylex();
 		yy_reader = new java.io.BufferedReader(new java.io.InputStreamReader(instream));
 	}
 
-	private A2 () {
+	private $$$$$$$ () {
 		yy_buffer = new char[YY_BUFFER_SIZE];
 		yy_buffer_read = 0;
 		yy_buffer_index = 0;
@@ -63,17 +63,17 @@ java.io.IOException
 		{
 		if (false == yy_eof_done) {
 
-BufferedWriter write = new BufferedWriter(new FileWriter("A2.output"));;
-write.append("identifiers: "+id+"\nkeywords: "+keywords+"\nnumbers: "+numbers+"\nlines: "+(yyline + 1)+"\nquotedString: "+quotes+"\n");
-write.close();
+BufferedWriter $$$$$$$ = new BufferedWriter(new FileWriter("A2.output"));;
+$$$$$$$.append("identifiers: "+____+"\nkeywords: "+__+"\numbers: "+___+"\nlines: "+(yyline + 1)+"\nquotedString: "+_+"\n");
+$$$$$$$.close();
 		}
 		yy_eof_done = true;
 	}
 	private final int YYINITIAL = 0;
-	private final int COMMENT = 1;
+	private final int $$$$$ = 1;
 	private final int yy_state_dtrans[] = {
 		0,
-		18
+		17
 	};
 	private void yybegin (int state) {
 		yy_lexical_state = state;
@@ -233,16 +233,16 @@ write.close();
 		/* 6 */ YY_NO_ANCHOR,
 		/* 7 */ YY_NO_ANCHOR,
 		/* 8 */ YY_NO_ANCHOR,
-		/* 9 */ YY_NO_ANCHOR,
-		/* 10 */ YY_NOT_ACCEPT,
+		/* 9 */ YY_NOT_ACCEPT,
+		/* 10 */ YY_NO_ANCHOR,
 		/* 11 */ YY_NO_ANCHOR,
 		/* 12 */ YY_NO_ANCHOR,
 		/* 13 */ YY_NO_ANCHOR,
-		/* 14 */ YY_NO_ANCHOR,
-		/* 15 */ YY_NOT_ACCEPT,
+		/* 14 */ YY_NOT_ACCEPT,
+		/* 15 */ YY_NO_ANCHOR,
 		/* 16 */ YY_NO_ANCHOR,
-		/* 17 */ YY_NO_ANCHOR,
-		/* 18 */ YY_NOT_ACCEPT,
+		/* 17 */ YY_NOT_ACCEPT,
+		/* 18 */ YY_NO_ANCHOR,
 		/* 19 */ YY_NO_ANCHOR,
 		/* 20 */ YY_NOT_ACCEPT,
 		/* 21 */ YY_NO_ANCHOR,
@@ -260,27 +260,26 @@ write.close();
 		/* 33 */ YY_NO_ANCHOR,
 		/* 34 */ YY_NO_ANCHOR,
 		/* 35 */ YY_NO_ANCHOR,
-		/* 36 */ YY_NO_ANCHOR,
-		/* 37 */ YY_NO_ANCHOR
+		/* 36 */ YY_NO_ANCHOR
 	};
 	private int yy_cmap[] = unpackFromString(1,130,
-"22:10,23,22:2,23,22:20,21,22:7,2,22:3,19,1,18:10,22:7,11,15,20,12,5,4,16,20" +
-",3,20:2,6,17,14,20:3,9,7,10,13,20,8,20:3,22:6,20:26,22:5,0:2")[0];
+"23:10,22,23:2,22,23:20,21,23:7,1,23:3,19,2,18:10,23:7,11,15,20,12,5,4,16,20" +
+",3,20:2,6,17,14,20:3,9,7,10,13,20,8,20:3,23:6,20:26,23:5,0:2")[0];
 
-	private int yy_rmap[] = unpackFromString(1,38,
-"0,1,2,3,4,1,5,6,1:2,7,1,5,8,1,9,6,10,11,12,13,14,15,16,17,18,19,20,21,22,23" +
-",24,25,26,27,28,29,30")[0];
+	private int yy_rmap[] = unpackFromString(1,37,
+"0,1:2,2,3,4,5,1:2,6,7,4,8,1,9,5,10,11,12,13,14,15,16,17,18,19,20,21,22,23,2" +
+"4,25,26,27,28,29,30")[0];
 
 	private int yy_nxt[][] = unpackFromString(31,24,
-"1,2,11,3,12,25,12:2,36,31,12:5,37,12,32,4,13,12,16,11,5,-1:26,10,-1:24,12,6" +
-",12:9,17,12:4,-1,12,-1:21,4,13,-1:7,12:16,-1,12,-1:4,15:20,7,15:2,-1:2,8,-1" +
-":39,13,-1:6,15:20,14,15:2,-1:3,12:7,6,12:8,-1,12,-1:3,1,11,24,11:20,5,-1:3," +
-"12:9,6,12:6,-1,12,-1:4,9,-1:25,12:2,6,12:13,-1,12,-1:6,12:3,6,12:5,6,12:6,-" +
-"1,12,-1:6,12:11,6,12:4,-1,12,-1:5,20,-1:24,12:3,26,12:7,19,12:4,-1,12,-1:6," +
-"12:4,21,12:11,-1,12,-1:6,12:7,35,22,12:7,-1,12,-1:6,23,12:15,-1,12,-1:6,12:" +
-"7,21,12:8,-1,12,-1:6,12:6,23,12:9,-1,12,-1:6,12:2,27,12:13,-1,12,-1:6,12:8," +
-"28,12:7,-1,12,-1:6,29,12:15,-1,12,-1:6,12:13,28,12:2,-1,12,-1:6,12:10,30,12" +
-":5,-1,12,-1:6,12:6,33,12:9,-1,12,-1:6,12:2,34,12:13,-1,12,-1:3");
+"1,2,10,3,11,24,11:2,35,30,11:5,36,11,31,4,12,11,15,-1,2,-1:27,11,5,11:9,16," +
+"11:4,-1,11,-1:21,4,12,-1:7,11:16,-1,11,-1:4,14:20,6,14:2,-1,7,-1:23,9,-1:40" +
+",12,-1:6,14:20,13,14:2,-1:3,11:7,5,11:8,-1,11,-1:3,1,18,2:20,-1,2,-1,20,-1:" +
+"25,11:9,5,11:6,-1,11,-1:5,8,-1:24,11:2,5,11:13,-1,11,-1:6,11:3,5,11:5,5,11:" +
+"6,-1,11,-1:6,11:11,5,11:4,-1,11,-1:6,11:3,25,11:7,19,11:4,-1,11,-1:6,11:4,2" +
+"1,11:11,-1,11,-1:6,11:7,34,22,11:7,-1,11,-1:6,23,11:15,-1,11,-1:6,11:7,21,1" +
+"1:8,-1,11,-1:6,11:6,23,11:9,-1,11,-1:6,11:2,26,11:13,-1,11,-1:6,11:8,27,11:" +
+"7,-1,11,-1:6,28,11:15,-1,11,-1:6,11:13,27,11:2,-1,11,-1:6,11:10,29,11:5,-1," +
+"11,-1:6,11:6,32,11:9,-1,11,-1:6,11:2,33,11:13,-1,11,-1:3");
 
 	public void yylex ()
 		throws java.io.IOException {
@@ -336,128 +335,124 @@ write.close();
 					case -3:
 						break;
 					case 3:
-						{ ++id;}
+						{ ++____;}
 					case -4:
 						break;
 					case 4:
-						{ ++numbers;}
+						{ ++___;}
 					case -5:
 						break;
 					case 5:
-						{}
+						{ ++__; }
 					case -6:
 						break;
 					case 6:
-						{ ++keywords; }
+						{ ++_;}
 					case -7:
 						break;
 					case 7:
-						{ ++quotes;}
+						{yybegin($$$$$);}
 					case -8:
 						break;
 					case 8:
-						{yybegin(COMMENT);}
+						{yybegin(YYINITIAL);}
 					case -9:
 						break;
-					case 9:
-						{yybegin(YYINITIAL);}
+					case 10:
+						{}
 					case -10:
 						break;
 					case 11:
-						{}
+						{ ++____;}
 					case -11:
 						break;
 					case 12:
-						{ ++id;}
+						{ ++___;}
 					case -12:
 						break;
 					case 13:
-						{ ++numbers;}
+						{ ++_;}
 					case -13:
 						break;
-					case 14:
-						{ ++quotes;}
+					case 15:
+						{}
 					case -14:
 						break;
 					case 16:
-						{}
+						{ ++____;}
 					case -15:
 						break;
-					case 17:
-						{ ++id;}
+					case 18:
+						{}
 					case -16:
 						break;
 					case 19:
-						{ ++id;}
+						{ ++____;}
 					case -17:
 						break;
 					case 21:
-						{ ++id;}
+						{ ++____;}
 					case -18:
 						break;
 					case 22:
-						{ ++id;}
+						{ ++____;}
 					case -19:
 						break;
 					case 23:
-						{ ++id;}
+						{ ++____;}
 					case -20:
 						break;
 					case 24:
-						{}
+						{ ++____;}
 					case -21:
 						break;
 					case 25:
-						{ ++id;}
+						{ ++____;}
 					case -22:
 						break;
 					case 26:
-						{ ++id;}
+						{ ++____;}
 					case -23:
 						break;
 					case 27:
-						{ ++id;}
+						{ ++____;}
 					case -24:
 						break;
 					case 28:
-						{ ++id;}
+						{ ++____;}
 					case -25:
 						break;
 					case 29:
-						{ ++id;}
+						{ ++____;}
 					case -26:
 						break;
 					case 30:
-						{ ++id;}
+						{ ++____;}
 					case -27:
 						break;
 					case 31:
-						{ ++id;}
+						{ ++____;}
 					case -28:
 						break;
 					case 32:
-						{ ++id;}
+						{ ++____;}
 					case -29:
 						break;
 					case 33:
-						{ ++id;}
+						{ ++____;}
 					case -30:
 						break;
 					case 34:
-						{ ++id;}
+						{ ++____;}
 					case -31:
 						break;
 					case 35:
-						{ ++id;}
+						{ ++____;}
 					case -32:
 						break;
 					case 36:
-						{ ++id;}
+						{ ++____;}
 					case -33:
-						break;
-					case 37:
-						{ ++id;}
-					case -34:
 						break;
 					default:
 						yy_error(YY_E_INTERNAL,false);
