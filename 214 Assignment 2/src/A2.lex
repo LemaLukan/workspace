@@ -4,16 +4,16 @@ import java.io.*;
 int _,__, ___, ____;
 public static void main(String argv[]) throws java.io.IOException {
 BufferedReader $$$$$$ = new BufferedReader(new FileReader("A2.input"));
-$$$$$$$ _____ = new $$$$$$$($$$$$$);
+A2 _____ = new A2($$$$$$);
 _____.yylex();
 }
 %}
 %type void
-%class $$$$$$$
+%class A2
 %eof{
-BufferedWriter $$$$$$$ = new BufferedWriter(new FileWriter("A2.output"));;
-$$$$$$$.append("identifiers: "+____+"\nkeywords: "+__+"\numbers: "+___+"\nlines: "+(yyline + 1)+"\nquotedString: "+_+"\n");
-$$$$$$$.close();
+	BufferedWriter $$$$$$$ = new BufferedWriter(new FileWriter("A2.output"));
+	$$$$$$$.append("identifiers: "+____+"\nkeywords: "+__+"\numbers: "+___+"\nlines: "+ (yyline + 1)+ "\nquotedString: "+_+"\n" );
+	$$$$$$$.close();
 %eof}
 %eofthrow{
 java.io.IOException
@@ -33,4 +33,5 @@ $$$$ = [0-9]*\.[0-9]*|[0-9]+
 <YYINITIAL> {$$$$} { ++___;}
 <YYINITIAL> {$$$} { ++____;}
 <YYINITIAL> {$} { ++_;}
+\r|\n {}
 . {}
