@@ -12,7 +12,7 @@ _____.yylex();
 %class A2
 %eof{
 	BufferedWriter $$$$$$$ = new BufferedWriter(new FileWriter("A2.output"));
-	$$$$$$$.append("identifiers: "+____+"\nkeywords: "+__+"\numbers: "+___+"\nlines: "+ (yyline + 1)+ "\nquotedString: "+_+"\n" );
+	$$$$$$$.append("identifiers: "+____+"\nkeywords: "+__+"\nnumbers: "+___+"\nlines: " + yyline+ "\nquotedString: "+_+"\n");
 	$$$$$$$.close();
 %eof}
 %eofthrow{
@@ -23,15 +23,15 @@ java.io.IOException
 %line
 $ = \"+[^\"]*\"
 $$ = IF|ELSE|WRITE|READ|RETURN|BEGIN|END|MAIN|INT|REAL
-$$$ = [a-zA-Z][a-zA-Z0-9]*
-$$$$ = [0-9]*\.[0-9]*|[0-9]+
+$$$ = [0-9]+\.[0-9]+|[0-9]+
+$$$$ = [a-zA-Z][a-zA-Z0-9]*
 %state $$$$$
 %%
 <$$$$$> "**/" {yybegin(YYINITIAL);}
 <YYINITIAL> "/**" {yybegin($$$$$);}
-<YYINITIAL> {$$} { ++__; }
-<YYINITIAL> {$$$$} { ++___;}
-<YYINITIAL> {$$$} { ++____;}
 <YYINITIAL> {$} { ++_;}
+<YYINITIAL> {$$} { ++__; }
+<YYINITIAL> {$$$} { ++___;}
+<YYINITIAL> {$$$$} { ++____;}
 \r|\n {}
 . {}
