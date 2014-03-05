@@ -1,47 +1,48 @@
-import java.io.*;
+import java_cup.runtime.*;
 %%
-%{    		
-int _,__, ___, ____;
-public static void main(String argv[]) throws java.io.IOException {
-BufferedReader ______ = new BufferedReader(new FileReader("A3.input"));
-A3 _____ = new A3(______);
-_____.yylex();
-}
-%}
+%implements Scanner
 %type Symbol
-%class A3
-%eof{
-	BufferedWriter _______ = new BufferedWriter(new FileWriter("A3.output"));
-	_______.append("numberOfMethods "+____+);
-	_______.close();
-%eof}
-%eofthrow{
-java.io.IOException
-%eofthrow}
+%function next_token
+%class A3Scanner
 %eofval{ return null;
 %eofval}
-%line
 $ = \"+[^\"]*\"
-$$ = [a-zA-Z][a-zA-Z0-9]*
-$$$ = [0-9]*\.[0-9]*|[0-9]+
-%state $$$$
-$$$$$ = IF
-$$$$$$ = ELSE
-$$$$$$$ = WRITE
-$$$$$$$$ = READ
-$$$$$$$$$ = RETURN
-$$$$$$$$$$ = BEGIN
-$$$$$$$$$$$ = END
-$$$$$$$$$$$$ = MAIN
-$$$$$$$$$$$$$ = INT
-$$$$$$$$$$$$$$ = REAL
+$$ = [0123456789]*\.[0123456789]*|[01234567899]+
+$$$ = [abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ][abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789]*
+%state $$$$, $$$$$
 %%
-<$$$$> "**/" {yybegin(YYINITIAL);}
+
 <YYINITIAL> "/**" {yybegin($$$$);}
-"IF" { return new Symbol(A3Symbol.IF); }
-<YYINITIAL> {$$$$$} { return new Symbol(A3Symbol.IF); }
-<YYINITIAL> {$$$} { ++___;}
-<YYINITIAL> {$$} { ++____;}
-<YYINITIAL> {$} { ++_;}
+<YYINITIAL> "REAL" {yybegin($$$$$); return new Symbol(13); }
+<YYINITIAL> "STRING" {yybegin($$$$$); return new Symbol(26); }
+<YYINITIAL> "INT" {yybegin($$$$$); return new Symbol(12); }
+
+<$$$$$> {$} { return new Symbol(2); }
+<$$$$> "**/" {yybegin($$$$$);}
+<$$$$$> "/**" {yybegin($$$$);}
+<$$$$$> "*" { return new Symbol(20); }
+<$$$$$> "READ" { return new Symbol(7); }
+<$$$$$> "ELSE" { return new Symbol(5); }
+<$$$$$> "+" { return new Symbol(18); }
+<$$$$$> ")" { return new Symbol(17); }
+<$$$$$> "INT" { return new Symbol(12); }
+<$$$$$> ";" { return new Symbol(14); }
+<$$$$$> "END" { return new Symbol(10); }
+<$$$$$> "RETURN" { return new Symbol(8); }
+<$$$$$> "IF" { return new Symbol(4); }
+<$$$$$> "(" { return new Symbol(16); }
+<$$$$$> "WRITE" { return new Symbol(6); }
+<$$$$$> "BEGIN" { return new Symbol(9); }
+<$$$$$> "STRING" { return new Symbol(26); }
+<$$$$$> "," { return new Symbol(15); }
+<$$$$$> "!=" { return new Symbol(24); }
+<$$$$$> "/" { return new Symbol(21); }
+<$$$$$> "MAIN" { return new Symbol(11); }
+<$$$$$> "-" { return new Symbol(19); }
+<$$$$$> ":=" { return new Symbol(22); }
+<$$$$$> "REAL" { return new Symbol(13); }
+<$$$$$> "==" { return new Symbol(23); }
+<$$$$$> {$$} {return new Symbol(25); }
+<$$$$$> {$$$} { return new Symbol(3); }
 \r|\n {}
 . {}
