@@ -3,7 +3,7 @@ import java_cup.runtime.*;
 %implements Scanner
 %type Symbol
 %function next_token
-%class A3Scanner
+%class A3_103693282_Scanner
 %eofval{ return null;
 %eofval}
 $ = \"+[^\"]*\"
