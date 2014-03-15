@@ -1,7 +1,7 @@
 import java_cup.runtime.*;
 
 
-class A3Scanner implements Scanner {
+class A5Scanner implements Scanner {
 	private final int YY_BUFFER_SIZE = 512;
 	private final int YY_F = -1;
 	private final int YY_NO_STATE = -1;
@@ -20,7 +20,7 @@ class A3Scanner implements Scanner {
 	private boolean yy_at_bol;
 	private int yy_lexical_state;
 
-	A3Scanner (java.io.Reader reader) {
+	A5Scanner (java.io.Reader reader) {
 		this ();
 		if (null == reader) {
 			throw (new Error("Error: Bad input stream initializer."));
@@ -28,7 +28,7 @@ class A3Scanner implements Scanner {
 		yy_reader = new java.io.BufferedReader(reader);
 	}
 
-	A3Scanner (java.io.InputStream instream) {
+	A5Scanner (java.io.InputStream instream) {
 		this ();
 		if (null == instream) {
 			throw (new Error("Error: Bad input stream initializer."));
@@ -36,7 +36,7 @@ class A3Scanner implements Scanner {
 		yy_reader = new java.io.BufferedReader(new java.io.InputStreamReader(instream));
 	}
 
-	private A3Scanner () {
+	private A5Scanner () {
 		yy_buffer = new char[YY_BUFFER_SIZE];
 		yy_buffer_read = 0;
 		yy_buffer_index = 0;
@@ -47,11 +47,13 @@ class A3Scanner implements Scanner {
 	}
 
 	private boolean yy_eof_done = false;
+	private final int $$$$ = 1;
 	private final int YYINITIAL = 0;
-	private final int COMMENT = 1;
+	private final int $$$$$ = 2;
 	private final int yy_state_dtrans[] = {
 		0,
-		39
+		68,
+		64
 	};
 	private void yybegin (int state) {
 		yy_lexical_state = state;
@@ -223,7 +225,7 @@ class A3Scanner implements Scanner {
 		/* 28 */ YY_NO_ANCHOR,
 		/* 29 */ YY_NO_ANCHOR,
 		/* 30 */ YY_NO_ANCHOR,
-		/* 31 */ YY_NOT_ACCEPT,
+		/* 31 */ YY_NO_ANCHOR,
 		/* 32 */ YY_NO_ANCHOR,
 		/* 33 */ YY_NO_ANCHOR,
 		/* 34 */ YY_NO_ANCHOR,
@@ -231,76 +233,97 @@ class A3Scanner implements Scanner {
 		/* 36 */ YY_NOT_ACCEPT,
 		/* 37 */ YY_NO_ANCHOR,
 		/* 38 */ YY_NO_ANCHOR,
-		/* 39 */ YY_NOT_ACCEPT,
+		/* 39 */ YY_NO_ANCHOR,
 		/* 40 */ YY_NO_ANCHOR,
 		/* 41 */ YY_NO_ANCHOR,
 		/* 42 */ YY_NOT_ACCEPT,
 		/* 43 */ YY_NO_ANCHOR,
 		/* 44 */ YY_NO_ANCHOR,
 		/* 45 */ YY_NO_ANCHOR,
-		/* 46 */ YY_NO_ANCHOR,
+		/* 46 */ YY_NOT_ACCEPT,
 		/* 47 */ YY_NO_ANCHOR,
 		/* 48 */ YY_NO_ANCHOR,
 		/* 49 */ YY_NO_ANCHOR,
-		/* 50 */ YY_NO_ANCHOR,
+		/* 50 */ YY_NOT_ACCEPT,
 		/* 51 */ YY_NO_ANCHOR,
 		/* 52 */ YY_NO_ANCHOR,
 		/* 53 */ YY_NO_ANCHOR,
-		/* 54 */ YY_NO_ANCHOR,
+		/* 54 */ YY_NOT_ACCEPT,
 		/* 55 */ YY_NO_ANCHOR,
-		/* 56 */ YY_NO_ANCHOR,
+		/* 56 */ YY_NOT_ACCEPT,
 		/* 57 */ YY_NO_ANCHOR,
-		/* 58 */ YY_NO_ANCHOR,
+		/* 58 */ YY_NOT_ACCEPT,
 		/* 59 */ YY_NO_ANCHOR,
-		/* 60 */ YY_NO_ANCHOR,
+		/* 60 */ YY_NOT_ACCEPT,
 		/* 61 */ YY_NO_ANCHOR,
-		/* 62 */ YY_NO_ANCHOR,
+		/* 62 */ YY_NOT_ACCEPT,
 		/* 63 */ YY_NO_ANCHOR,
-		/* 64 */ YY_NO_ANCHOR,
+		/* 64 */ YY_NOT_ACCEPT,
 		/* 65 */ YY_NO_ANCHOR,
-		/* 66 */ YY_NO_ANCHOR,
-		/* 67 */ YY_NO_ANCHOR,
-		/* 68 */ YY_NO_ANCHOR,
-		/* 69 */ YY_NO_ANCHOR
+		/* 66 */ YY_NOT_ACCEPT,
+		/* 67 */ YY_NOT_ACCEPT,
+		/* 68 */ YY_NOT_ACCEPT,
+		/* 69 */ YY_NO_ANCHOR,
+		/* 70 */ YY_NO_ANCHOR,
+		/* 71 */ YY_NO_ANCHOR,
+		/* 72 */ YY_NO_ANCHOR,
+		/* 73 */ YY_NO_ANCHOR,
+		/* 74 */ YY_NO_ANCHOR,
+		/* 75 */ YY_NO_ANCHOR,
+		/* 76 */ YY_NO_ANCHOR,
+		/* 77 */ YY_NO_ANCHOR,
+		/* 78 */ YY_NO_ANCHOR,
+		/* 79 */ YY_NO_ANCHOR,
+		/* 80 */ YY_NO_ANCHOR,
+		/* 81 */ YY_NO_ANCHOR,
+		/* 82 */ YY_NO_ANCHOR,
+		/* 83 */ YY_NO_ANCHOR,
+		/* 84 */ YY_NO_ANCHOR,
+		/* 85 */ YY_NO_ANCHOR,
+		/* 86 */ YY_NO_ANCHOR,
+		/* 87 */ YY_NO_ANCHOR
 	};
 	private int yy_cmap[] = unpackFromString(1,130,
-"2:10,32,2:2,32,2:19,24,1,2:5,19,12,3,11,23,27,30,4,29:10,28,16,2,25,2:3,7,2" +
-"1,31,8,6,18,22,31,13,31:2,9,26,14,31:3,5,10,15,17,31,20,31:3,2:6,31:26,2:5," +
-"0:2")[0];
+"13:9,32:2,13:2,32,13:18,32,24,12,13:5,20,16,2,15,23,27,30,1,29:10,28,17,13," +
+"25,13:3,5,22,31,14,4,19,11,31,9,31:2,6,26,10,31:3,3,7,8,18,31,21,31:3,13:6," +
+"31:26,13:5,0:2")[0];
 
-	private int yy_rmap[] = unpackFromString(1,70,
-"0,1,2,1,3,4,1:6,5,1,2,6,1:4,6:10,1,7,1,8,9,1,10,11,12,13,14,15,16,17,18,19," +
-"20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,6,38,39,40,41,42")[0];
+	private int yy_rmap[] = unpackFromString(1,88,
+"0,1,2,1:6,3,1,4,5,1:6,6,7,5,1:4,7:10,8,1,9,1,10,1,11,12,13,14,15,16,17,18,1" +
+"9,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,4" +
+"4,45,46,47,48,49,50,7,51,52,53,54,55")[0];
 
-	private int yy_nxt[][] = unpackFromString(43,33,
-"1,2,32,3,4,5,52,64:3,66,6,7,33,64:2,8,64:2,9,67,68,64,10,37,40,69,11,43,12," +
-"34,64,13,-1:34,14,31:31,-1:3,36,-1:34,64,53,64:4,-1:2,64:3,-1,64:2,-1,64:3," +
-"-1:3,64,-1:2,64,-1,64,-1:30,12,34,-1:7,64:6,-1:2,64:3,-1,64:2,-1,64:3,-1:3," +
-"64,-1:2,64,-1,64,-1:2,35,31:31,-1:5,64:6,-1:2,64,41,64,-1,64,15,-1,64:3,-1:" +
-"3,64,-1:2,64,-1,64,-1:30,34,-1:6,19,-1:54,16,-1:12,64:3,20,64:2,-1:2,64:3,-" +
-"1,64:2,-1,64:3,-1:3,64,-1:2,64,-1,64,-1,1,32:2,45,32:28,13,-1:25,17,-1:12,6" +
-"4:6,-1:2,64:2,21,-1,64:2,-1,64:3,-1:3,64,-1:2,64,-1,64,-1:5,30,-1:53,18,-1:" +
-"12,64:3,22,23,64,-1:2,64:3,-1,64:2,-1,64:3,-1:3,64,-1:2,64,-1,64,-1:4,42,-1" +
-":34,64,24,64:4,-1:2,64:3,-1,64:2,-1,64:3,-1:3,64,-1:2,64,-1,64,-1:6,64:6,-1" +
-":2,64,25,64,-1,64:2,-1,64:3,-1:3,64,-1:2,64,-1,64,-1:6,64,26,64:4,-1:2,64:3" +
-",-1,64:2,-1,64:3,-1:3,64,-1:2,64,-1,64,-1:6,64:6,-1:2,64,27,64,-1,64:2,-1,6" +
-"4:3,-1:3,64,-1:2,64,-1,64,-1:6,64:6,-1:2,64,28,64,-1,64:2,-1,64:3,-1:3,64,-" +
-"1:2,64,-1,64,-1:6,64:6,-1:2,64:3,-1,64:2,-1,64:2,29,-1:3,64,-1:2,64,-1,64,-" +
-"1:6,64:4,54,64,-1:2,64,38,64,-1,64:2,-1,64:3,-1:3,64,-1:2,64,-1,64,-1:6,64:" +
-"2,44,64:3,-1:2,64:2,59,-1,64:2,-1,64:3,-1:3,64,-1:2,64,-1,64,-1:6,64:5,46,-" +
-"1:2,64:3,-1,64:2,-1,64:3,-1:3,64,-1:2,64,-1,64,-1:6,65,64:5,-1:2,64:3,-1,64" +
-":2,-1,64:3,-1:3,64,-1:2,64,-1,64,-1:6,64:6,-1:2,60,64:2,-1,64:2,-1,64:3,-1:" +
-"3,64,-1:2,64,-1,64,-1:6,64:6,-1:2,64:3,-1,64:2,-1,64:2,61,-1:3,64,-1:2,64,-" +
-"1,64,-1:6,64:6,-1:2,47,64:2,-1,64:2,-1,64:3,-1:3,64,-1:2,64,-1,64,-1:6,64:6" +
-",-1:2,64:3,-1,62,64,-1,64:3,-1:3,64,-1:2,64,-1,64,-1:6,64:6,-1:2,64:2,48,-1" +
-",64:2,-1,64:3,-1:3,64,-1:2,64,-1,64,-1:6,64:6,-1:2,49,64:2,-1,64:2,-1,64:3," +
-"-1:3,64,-1:2,64,-1,64,-1:6,50,64:5,-1:2,64:3,-1,64:2,-1,64:3,-1:3,64,-1:2,6" +
-"4,-1,64,-1:6,64:6,-1:2,64,51,64,-1,64:2,-1,64:3,-1:3,64,-1:2,64,-1,64,-1:6," +
-"64:6,-1:2,63,64:2,-1,64:2,-1,64:3,-1:3,64,-1:2,64,-1,64,-1:6,64:6,-1:2,64:2" +
-",55,-1,64:2,-1,64:3,-1:3,64,-1:2,64,-1,64,-1:6,56,64:5,-1:2,64:3,-1,64:2,-1" +
-",64:3,-1:3,64,-1:2,64,-1,64,-1:6,64,57,64:4,-1:2,64:3,-1,64:2,-1,64:3,-1:3," +
-"64,-1:2,64,-1,64,-1:6,64:2,58,64:3,-1:2,64:3,-1,64:2,-1,64:3,-1:3,64,-1:2,6" +
-"4,-1,64,-1");
+	private int yy_nxt[][] = unpackFromString(56,33,
+"1,2,37,43,37:3,47,37,51,37:22,3,-1:35,36,-1:32,66,-1:33,82,71,82:7,-1:2,82," +
+"-1:3,82:2,-1,82:2,-1:3,82,-1:2,82,-1,82,-1:2,67:11,21,67:20,-1:29,19,40,-1:" +
+"5,82:9,-1:2,82,-1:3,82:2,-1,82:2,-1:3,82,-1:2,82,-1,82,-1:3,4,-1:33,82:7,48" +
+",82,-1:2,82,-1:3,82,20,-1,82:2,-1:3,82,-1:2,82,-1,82,-1:30,40,-1:8,54,-1:31" +
+",42,-1:31,82:9,-1:2,26,-1:3,82:2,-1,82:2,-1:3,82,-1:2,82,-1,82,-1:26,22,-1:" +
+"10,56,-1:37,46,-1:27,82:5,27,82:3,-1:2,82,-1:3,82:2,-1,82:2,-1:3,82,-1:2,82" +
+",-1,82,-1:26,23,-1:15,5,-1:34,50,-1:25,82:3,28,82:5,-1:2,29,-1:3,82:2,-1,82" +
+":2,-1:3,82,-1:2,82,-1,82,-1:26,24,-1:13,6,-1:29,82,30,82:7,-1:2,82,-1:3,82:" +
+"2,-1,82:2,-1:3,82,-1:2,82,-1,82,-1:10,58,-1:26,82:7,31,82,-1:2,82,-1:3,82:2" +
+",-1,82:2,-1:3,82,-1:2,82,-1,82,-1:11,60,-1:25,82,32,82:7,-1:2,82,-1:3,82:2," +
+"-1,82:2,-1:3,82,-1:2,82,-1,82,-1:12,7,-1:24,82:7,33,82,-1:2,82,-1:3,82:2,-1" +
+",82:2,-1:3,82,-1:2,82,-1,82,-1:2,8,-1:34,82:7,34,82,-1:2,82,-1:3,82:2,-1,82" +
+":2,-1:3,82,-1:2,82,-1,82,-1,1,9,10,11,70,82:2,84,82,38,82:2,12,39,82,13,14," +
+"15,82:2,16,85,86,17,45,49,87,18,53,19,40,82,3,-1:3,82:8,35,-1:2,82,-1:3,82:" +
+"2,-1,82:2,-1:3,82,-1:2,82,-1,82,-1:3,25,-1:31,67:11,41,67:20,1,37,69,37:29," +
+"3,-1:2,62,-1:33,82:3,72,82:3,44,82,-1:2,82,-1:3,82:2,-1,82:2,-1:3,82,-1:2,8" +
+"2,-1,82,-1:4,82:2,52,82:2,77,82:3,-1:2,82,-1:3,82:2,-1,82:2,-1:3,82,-1:2,82" +
+",-1,82,-1:4,82:4,55,82:4,-1:2,82,-1:3,82:2,-1,82:2,-1:3,82,-1:2,82,-1,82,-1" +
+":4,83,82:8,-1:2,82,-1:3,82:2,-1,82:2,-1:3,82,-1:2,82,-1,82,-1:4,82:6,78,82:" +
+"2,-1:2,82,-1:3,82:2,-1,82:2,-1:3,82,-1:2,82,-1,82,-1:4,82:8,79,-1:2,82,-1:3" +
+",82:2,-1,82:2,-1:3,82,-1:2,82,-1,82,-1:4,82:6,57,82:2,-1:2,82,-1:3,82:2,-1," +
+"82:2,-1:3,82,-1:2,82,-1,82,-1:4,82:9,-1:2,82,-1:3,80,82,-1,82:2,-1:3,82,-1:" +
+"2,82,-1,82,-1:4,82:5,59,82:3,-1:2,82,-1:3,82:2,-1,82:2,-1:3,82,-1:2,82,-1,8" +
+"2,-1:4,82:6,61,82:2,-1:2,82,-1:3,82:2,-1,82:2,-1:3,82,-1:2,82,-1,82,-1:4,63" +
+",82:8,-1:2,82,-1:3,82:2,-1,82:2,-1:3,82,-1:2,82,-1,82,-1:4,82:7,65,82,-1:2," +
+"82,-1:3,82:2,-1,82:2,-1:3,82,-1:2,82,-1,82,-1:4,82:6,81,82:2,-1:2,82,-1:3,8" +
+"2:2,-1,82:2,-1:3,82,-1:2,82,-1,82,-1:4,82:5,73,82:3,-1:2,82,-1:3,82:2,-1,82" +
+":2,-1:3,82,-1:2,82,-1,82,-1:4,74,82:8,-1:2,82,-1:3,82:2,-1,82:2,-1:3,82,-1:" +
+"2,82,-1,82,-1:4,82,75,82:7,-1:2,82,-1:3,82:2,-1,82:2,-1:3,82,-1:2,82,-1,82," +
+"-1:4,82:2,76,82:6,-1:2,82,-1:3,82:2,-1,82:2,-1:3,82,-1:2,82,-1,82,-1");
 
 	public Symbol next_token ()
 		throws java.io.IOException {
@@ -324,7 +347,7 @@ class A3Scanner implements Scanner {
 			yy_next_state = YY_F;
 			yy_next_state = yy_nxt[yy_rmap[yy_state]][yy_cmap[yy_lookahead]];
 			if (YY_EOF == yy_lookahead && true == yy_initial) {
- return null;
+ return new Symbol(0);
 			}
 			if (YY_F != yy_next_state) {
 				yy_state = yy_next_state;
@@ -355,256 +378,292 @@ class A3Scanner implements Scanner {
 					case -3:
 						break;
 					case 3:
-						{ return new Symbol(A3Symbol.TIMES); }
+						{}
 					case -4:
 						break;
 					case 4:
-						{ return new Symbol(A3Symbol.DIVIDE); }
+						{yybegin($$$$);}
 					case -5:
 						break;
 					case 5:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
+						{yybegin($$$$$); return new Symbol(12); }
 					case -6:
 						break;
 					case 6:
-						{ return new Symbol(A3Symbol.PLUS); }
+						{yybegin($$$$$); return new Symbol(13); }
 					case -7:
 						break;
 					case 7:
-						{ return new Symbol(A3Symbol.RPAREN); }
+						{yybegin($$$$$); return new Symbol(26); }
 					case -8:
 						break;
 					case 8:
-						{ return new Symbol(A3Symbol.SEMI); }
+						{yybegin($$$$$);}
 					case -9:
 						break;
 					case 9:
-						{ return new Symbol(A3Symbol.LPAREN); }
+						{ return new Symbol(21); }
 					case -10:
 						break;
 					case 10:
-						{ return new Symbol(A3Symbol.COMMA); }
+						{ return new Symbol(20); }
 					case -11:
 						break;
 					case 11:
-						{ return new Symbol(A3Symbol.MINUS); }
+						{ return new Symbol(3); }
 					case -12:
 						break;
 					case 12:
-						{return new Symbol(A3Symbol.NUMBER); }
+						{ return new Symbol(1); }
 					case -13:
 						break;
 					case 13:
-						{}
+						{ return new Symbol(18); }
 					case -14:
 						break;
 					case 14:
-						{ return new Symbol(A3Symbol.QUOTE); }
+						{ return new Symbol(17); }
 					case -15:
 						break;
 					case 15:
-						{ return new Symbol(A3Symbol.IF); }
+						{ return new Symbol(14); }
 					case -16:
 						break;
 					case 16:
-						{ return new Symbol(A3Symbol.NEQUAL); }
+						{ return new Symbol(16); }
 					case -17:
 						break;
 					case 17:
-						{ return new Symbol(A3Symbol.EEQUAL); }
+						{ return new Symbol(15); }
 					case -18:
 						break;
 					case 18:
-						{ return new Symbol(A3Symbol.CEQUAL); }
+						{ return new Symbol(19); }
 					case -19:
 						break;
 					case 19:
-						{yybegin(COMMENT);}
+						{return new Symbol(25); }
 					case -20:
 						break;
 					case 20:
-						{ return new Symbol(A3Symbol.END); }
+						{ return new Symbol(4); }
 					case -21:
 						break;
 					case 21:
-						{ return new Symbol(A3Symbol.INT); }
+						{ return new Symbol(2); }
 					case -22:
 						break;
 					case 22:
-						{ return new Symbol(A3Symbol.READ); }
+						{ return new Symbol(24); }
 					case -23:
 						break;
 					case 23:
-						{ return new Symbol(A3Symbol.REAL); }
+						{ return new Symbol(23); }
 					case -24:
 						break;
 					case 24:
-						{ return new Symbol(A3Symbol.ELSE); }
+						{ return new Symbol(22); }
 					case -25:
 						break;
 					case 25:
-						{ return new Symbol(A3Symbol.MAIN); }
+						{yybegin($$$$);}
 					case -26:
 						break;
 					case 26:
-						{ return new Symbol(A3Symbol.WRITE); }
+						{ return new Symbol(10); }
 					case -27:
 						break;
 					case 27:
-						{ return new Symbol(A3Symbol.BEGIN); }
+						{ return new Symbol(12); }
 					case -28:
 						break;
 					case 28:
-						{ return new Symbol(A3Symbol.RETURN); }
+						{ return new Symbol(13); }
 					case -29:
 						break;
 					case 29:
-						{ return new Symbol(A3Symbol.STRING); }
+						{ return new Symbol(7); }
 					case -30:
 						break;
 					case 30:
-						{yybegin(YYINITIAL);}
+						{ return new Symbol(5); }
 					case -31:
 						break;
-					case 32:
-						{}
+					case 31:
+						{ return new Symbol(11); }
 					case -32:
 						break;
-					case 33:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
+					case 32:
+						{ return new Symbol(6); }
 					case -33:
 						break;
-					case 34:
-						{return new Symbol(A3Symbol.NUMBER); }
+					case 33:
+						{ return new Symbol(9); }
 					case -34:
 						break;
-					case 35:
-						{ return new Symbol(A3Symbol.QUOTE); }
+					case 34:
+						{ return new Symbol(8); }
 					case -35:
+						break;
+					case 35:
+						{ return new Symbol(26); }
+					case -36:
 						break;
 					case 37:
 						{}
-					case -36:
-						break;
-					case 38:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
 					case -37:
 						break;
-					case 40:
-						{}
+					case 38:
+						{ return new Symbol(3); }
 					case -38:
 						break;
-					case 41:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
+					case 39:
+						{ return new Symbol(1); }
 					case -39:
+						break;
+					case 40:
+						{return new Symbol(25); }
+					case -40:
+						break;
+					case 41:
+						{ return new Symbol(2); }
+					case -41:
 						break;
 					case 43:
 						{}
-					case -40:
-						break;
-					case 44:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
-					case -41:
-						break;
-					case 45:
-						{}
 					case -42:
 						break;
-					case 46:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
+					case 44:
+						{ return new Symbol(3); }
 					case -43:
 						break;
-					case 47:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
+					case 45:
+						{ return new Symbol(1); }
 					case -44:
 						break;
-					case 48:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
+					case 47:
+						{}
 					case -45:
 						break;
-					case 49:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
+					case 48:
+						{ return new Symbol(3); }
 					case -46:
 						break;
-					case 50:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
+					case 49:
+						{ return new Symbol(1); }
 					case -47:
 						break;
 					case 51:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
+						{}
 					case -48:
 						break;
 					case 52:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
+						{ return new Symbol(3); }
 					case -49:
 						break;
 					case 53:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
+						{ return new Symbol(1); }
 					case -50:
 						break;
-					case 54:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
+					case 55:
+						{ return new Symbol(3); }
 					case -51:
 						break;
-					case 55:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
+					case 57:
+						{ return new Symbol(3); }
 					case -52:
 						break;
-					case 56:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
+					case 59:
+						{ return new Symbol(3); }
 					case -53:
 						break;
-					case 57:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
+					case 61:
+						{ return new Symbol(3); }
 					case -54:
 						break;
-					case 58:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
+					case 63:
+						{ return new Symbol(3); }
 					case -55:
 						break;
-					case 59:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
+					case 65:
+						{ return new Symbol(3); }
 					case -56:
 						break;
-					case 60:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
+					case 69:
+						{}
 					case -57:
 						break;
-					case 61:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
+					case 70:
+						{ return new Symbol(3); }
 					case -58:
 						break;
-					case 62:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
+					case 71:
+						{ return new Symbol(3); }
 					case -59:
 						break;
-					case 63:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
+					case 72:
+						{ return new Symbol(3); }
 					case -60:
 						break;
-					case 64:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
+					case 73:
+						{ return new Symbol(3); }
 					case -61:
 						break;
-					case 65:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
+					case 74:
+						{ return new Symbol(3); }
 					case -62:
 						break;
-					case 66:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
+					case 75:
+						{ return new Symbol(3); }
 					case -63:
 						break;
-					case 67:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
+					case 76:
+						{ return new Symbol(3); }
 					case -64:
 						break;
-					case 68:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
+					case 77:
+						{ return new Symbol(3); }
 					case -65:
 						break;
-					case 69:
-						{ return new Symbol(A3Symbol.IDENTIFIER); }
+					case 78:
+						{ return new Symbol(3); }
 					case -66:
+						break;
+					case 79:
+						{ return new Symbol(3); }
+					case -67:
+						break;
+					case 80:
+						{ return new Symbol(3); }
+					case -68:
+						break;
+					case 81:
+						{ return new Symbol(3); }
+					case -69:
+						break;
+					case 82:
+						{ return new Symbol(3); }
+					case -70:
+						break;
+					case 83:
+						{ return new Symbol(3); }
+					case -71:
+						break;
+					case 84:
+						{ return new Symbol(3); }
+					case -72:
+						break;
+					case 85:
+						{ return new Symbol(3); }
+					case -73:
+						break;
+					case 86:
+						{ return new Symbol(3); }
+					case -74:
+						break;
+					case 87:
+						{ return new Symbol(3); }
+					case -75:
 						break;
 					default:
 						yy_error(YY_E_INTERNAL,false);
