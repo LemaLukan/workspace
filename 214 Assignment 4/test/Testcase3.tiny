@@ -1,0 +1,7 @@
+/** Test case 3  illegal  by tester looks legal... **/
+INT MAIN f()
+	BEGIN
+	x := 5;
+	x := 5;
+	x := y*y-x*x;
+	END

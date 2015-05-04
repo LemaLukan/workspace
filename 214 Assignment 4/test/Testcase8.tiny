@@ -1,0 +1,8 @@
+/** Test case 8 **/
+
+INT MAIN f()
+	BEGIN
+		STRING x;
+		x := "hi";
+		WRITE (x, "a");
+	END

@@ -1,0 +1,1 @@
+import java.io.*;public class A4 {	static BufferedReader $br;	static BufferedWriter $bw;	static double $tmp_real;public static void main(String[] args) throws Exception {String x;x= "hi";$bw = new BufferedWriter(new FileWriter("a" ));$bw.write("" + (x)); $bw.close();}}

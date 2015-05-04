@@ -1,6 +1,4 @@
-import java_cup.runtime.*;
 %%
-%implements Scanner
 %type Symbol
 %function next_token
 %class A5Scanner

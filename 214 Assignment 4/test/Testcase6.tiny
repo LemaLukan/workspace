@@ -1,0 +1,20 @@
+/** Test case 6 **/
+INT MAIN f()
+	BEGIN
+	INT x;
+	x := f1(43);
+	REAL z;
+z := f2(x,34);
+WRITE(x, " ");
+END
+
+INT f1(INT x)
+	BEGIN
+	RETURN x + 43;
+	END
+
+REAL f2(INT l, REAL j)
+	BEGIN
+	REAL q;
+q := l + j;
+END

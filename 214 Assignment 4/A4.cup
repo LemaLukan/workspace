@@ -1,0 +1,101 @@
+import java.io.*;
+
+terminal IF, ELSE, WRITE, READ, RETURN, BEGIN, END, MAIN, INT, REAL, SEMI, COMMA, _3, RPAREN, PLUS, MINUS, TIMES, DIVIDE, CEQUAL, EEQUAL, NEQUAL, STRING;
+terminal String _2, _, NUMBER;
+non terminal String Starter, Program, MethodDecl, FormalParams, FormalParam, Type, Block, Statements, Statement, LocalVarDecl, AssignStmt, ReturnStmt, IfStmt, WriteStmt, ReadStmt, ArithExpress, _5, __, _4, ActualParams;
+
+precedence left PLUS, MINUS;
+precedence left TIMES, DIVIDE;
+precedence left ELSE;
+
+Starter ::= Program:e 
+{: RESULT = 
+
+
+
+	"import java.io.*;public class A4 {\tstatic BufferedReader $br;\tstatic BufferedWriter $bw;\tstatic double $tmp_real;" + e + "}"; :}
+	;
+Program		::= MethodDecl:e {: RESULT = e; :}
+ 	 	| MethodDecl:e Program:_1 {: RESULT = e + "" + _1; :}
+		;
+
+MethodDecl 	::= Type MAIN _ _3 FormalParams RPAREN Block:e {: RESULT = "public static void main(String[] args) throws Exception {" + e + "}" ; :}
+		| Type:e _:_1 _3 FormalParams:e2 RPAREN Block:e3 {: RESULT = "static " + e + " " + _1 + "(" + e2 + ") throws Exception {" + e3 + "}"; :}
+		;
+
+FormalParams 	::= {: RESULT = ""; :}
+		| FormalParam:e {: RESULT = e; :}
+		| FormalParam:e COMMA FormalParams:_1 {: RESULT = e + ", " + _1; :}
+		;
+
+FormalParam 	::= Type:e _:_1 {: RESULT = e + " " + _1; :}
+		;
+
+Type 		::= INT {: RESULT = "int"; :}
+		| REAL {: RESULT = "double"; :}
+		| STRING {: RESULT = "String"; :}
+		;
+
+
+Block		::= BEGIN Statements:e END {: RESULT =  "" + e + ""; :} 
+		| BEGIN END {: RESULT = ""; :}
+		;
+
+Statements	::= Statement:e {: RESULT = e; :}
+		| Statement:e Statements:_1 {: RESULT = e + "" + _1; :}
+		;
+
+Statement	::= Block:e {: RESULT = e; :}
+		| LocalVarDecl:e  {: RESULT = e + ""; :}
+		| AssignStmt:e   {: RESULT = e + ""; :}
+		| ReturnStmt:e {: RESULT = e + ""; :}
+		| IfStmt:e {: RESULT = e + ""; :}
+		| WriteStmt:e {: RESULT = e + ""; :}
+		| ReadStmt:e {: RESULT = e + ""; :}
+		;
+			           
+LocalVarDecl	::= Type:e _:_1 SEMI {: RESULT = e + " " + _1 + ";"; :}
+		| Type:e AssignStmt:_1 {: RESULT = e + " " + _1 + ";"; :}
+		;
+
+AssignStmt	::= _:e CEQUAL ArithExpress:_1 SEMI{: RESULT = e + "= " + _1 + ";"; :}
+		| _:e CEQUAL _2:_1 SEMI{: RESULT = e + "= " + _1 + ";"; :}
+		;
+
+ReturnStmt	::= RETURN ArithExpress:e SEMI{: RESULT = "return " + e + ";"; :}
+		;
+
+IfStmt		::= IF _3 _4:e RPAREN Statement:_1 {: RESULT = "if (" + e + ") {" + _1 + "}"; :}
+		| IF _3 _4:e RPAREN Statement:_1 ELSE Statement:e2 {: RESULT = "if (" + e + ") {"+ _1 + "} else {" + e2 + "}"; :}
+		;
+
+WriteStmt	::= WRITE _3 ArithExpress:e COMMA _2:_1 RPAREN SEMI{: RESULT = "$bw = new BufferedWriter(new FileWriter(" + _1 + " ));$bw.write(\"\" + (" + e + ")); $bw.close();" ; :}
+		;
+
+ReadStmt	::= READ _3 _:e COMMA _2:_1 RPAREN SEMI{: RESULT = "$br = new BufferedReader(new FileReader(" + _1 + "));" + e + " = new Integer($br.readLine()).intValue();"; :}
+		;
+
+ArithExpress	::= _5:e {: RESULT = e; :}
+		| _5:e PLUS ArithExpress:_1 {: RESULT = e  + "+" + _1; :}
+		| _5:e MINUS ArithExpress:_1 {: RESULT = e + "-" + _1; :}
+		;
+
+_5	::= __:e {: RESULT = e; :}
+		| __:e TIMES _5:_1 {: RESULT = e + "*" + _1; :}
+		| __:e DIVIDE _5:_1 {: RESULT = e + "/" + _1; :}
+		;
+
+__	::= NUMBER:e {: RESULT = e; :}
+		| _:e            {: RESULT = e; :}
+		| _3 ArithExpress:e RPAREN {: RESULT = "(" + e + ")"; :}
+		| _:e _3 ActualParams:_1 RPAREN {: RESULT = e + "(" + _1 +")"; :}
+		| _:e _3 RPAREN {: RESULT = e + "()"; :}
+		;
+
+_4	::= ArithExpress:e EEQUAL ArithExpress:_1 {: RESULT = e + " == " + _1; :}
+		| ArithExpress:e NEQUAL ArithExpress:_1 {: RESULT = e + " != " + _1; :}
+		;
+
+ActualParams	::= ArithExpress:e {: RESULT = e; :}
+		| ArithExpress:e COMMA ActualParams:_1 {: RESULT = e + ", " + _1; :}
+		;

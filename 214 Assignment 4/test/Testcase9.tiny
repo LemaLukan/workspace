@@ -1,0 +1,15 @@
+/** Test case 9 **/
+INT MAIN f()
+	BEGIN
+	INT x;
+	x := 25;
+	IF (x == 65)
+		BEGIN
+		READ(x, " ");
+		END
+	ELSE
+		BEGIN
+		INT z;
+		END
+	WRITE(x+54, " ");
+	END

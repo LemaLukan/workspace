@@ -1,0 +1,6 @@
+/** Test case 4 illegal by marking looks legal**/
+INT MAIN f()
+	BEGIN
+	INT x;
+	x := f(34,54);
+	END

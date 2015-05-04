@@ -1,0 +1,33 @@
+/** Test case 7 **/
+INT MAIN f()
+	BEGIN
+	INT x;
+	x := f1();
+	END
+
+INT f1()
+	BEGIN
+	INT l;
+	INT p;
+	INT e;
+	l := 43;
+	p := 43;
+	e := 65;
+	IF (l == e)
+		l := l*e-p*l+e*p-e+e/l/p;
+	IF (l != p)
+	BEGIN
+		IF (l+e == 54)
+		BEGIN 
+			p := l+e-54;
+			e :=l-54;
+			RETURN 54;
+		END
+		WRITE(l, " ");
+	END
+	ELSE
+	BEGIN
+		INT q;
+	END
+	RETURN 54;
+END

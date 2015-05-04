@@ -1,6 +1,7 @@
+import java_cup.runtime.*;
 
 
-class A5Scanner {
+class A4Scanner implements Scanner {
 	private final int YY_BUFFER_SIZE = 512;
 	private final int YY_F = -1;
 	private final int YY_NO_STATE = -1;
@@ -19,7 +20,7 @@ class A5Scanner {
 	private boolean yy_at_bol;
 	private int yy_lexical_state;
 
-	A5Scanner (java.io.Reader reader) {
+	A4Scanner (java.io.Reader reader) {
 		this ();
 		if (null == reader) {
 			throw (new Error("Error: Bad input stream initializer."));
@@ -27,7 +28,7 @@ class A5Scanner {
 		yy_reader = new java.io.BufferedReader(reader);
 	}
 
-	A5Scanner (java.io.InputStream instream) {
+	A4Scanner (java.io.InputStream instream) {
 		this ();
 		if (null == instream) {
 			throw (new Error("Error: Bad input stream initializer."));
@@ -35,7 +36,7 @@ class A5Scanner {
 		yy_reader = new java.io.BufferedReader(new java.io.InputStreamReader(instream));
 	}
 
-	private A5Scanner () {
+	private A4Scanner () {
 		yy_buffer = new char[YY_BUFFER_SIZE];
 		yy_buffer_read = 0;
 		yy_buffer_index = 0;
@@ -324,7 +325,7 @@ class A5Scanner {
 "2,82,-1,82,-1:4,82,75,82:7,-1:2,82,-1:3,82:2,-1,82:2,-1:3,82,-1:2,82,-1,82," +
 "-1:4,82:2,76,82:6,-1:2,82,-1:3,82:2,-1,82:2,-1:3,82,-1:2,82,-1,82,-1");
 
-	public Symbol next_token ()
+	public java_cup.runtime.Symbol next_token ()
 		throws java.io.IOException {
 		int yy_lookahead;
 		int yy_anchor = YY_NO_ANCHOR;
@@ -346,7 +347,7 @@ class A5Scanner {
 			yy_next_state = YY_F;
 			yy_next_state = yy_nxt[yy_rmap[yy_state]][yy_cmap[yy_lookahead]];
 			if (YY_EOF == yy_lookahead && true == yy_initial) {
- return new Symbol(0);
+ return new java_cup.runtime.Symbol(0);
 			}
 			if (YY_F != yy_next_state) {
 				yy_state = yy_next_state;
@@ -385,127 +386,127 @@ class A5Scanner {
 					case -5:
 						break;
 					case 5:
-						{yybegin($$$$$); return new Symbol(12); }
+						{yybegin($$$$$);System.out.println(10);  return new java_cup.runtime.Symbol(10); }
 					case -6:
 						break;
 					case 6:
-						{yybegin($$$$$); return new Symbol(13); }
+						{yybegin($$$$$);System.out.println(11);  return new java_cup.runtime.Symbol(11); }
 					case -7:
 						break;
 					case 7:
-						{yybegin($$$$$); return new Symbol(26); }
+						{yybegin($$$$$);System.out.println(23);  return new java_cup.runtime.Symbol(23); }
 					case -8:
 						break;
 					case 8:
-						{yybegin($$$$$);}
+						{ yybegin($$$$$); }
 					case -9:
 						break;
 					case 9:
-						{ return new Symbol(21); }
+						{ System.out.println(19); return new java_cup.runtime.Symbol(19); }
 					case -10:
 						break;
 					case 10:
-						{ return new Symbol(20); }
+						{ System.out.println(18); return new java_cup.runtime.Symbol(18); }
 					case -11:
 						break;
 					case 11:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -12:
 						break;
 					case 12:
-						{ return new Symbol(1); }
+						{ System.out.println(1); return new java_cup.runtime.Symbol(1); }
 					case -13:
 						break;
 					case 13:
-						{ return new Symbol(18); }
+						{ System.out.println(16); return new java_cup.runtime.Symbol(16); }
 					case -14:
 						break;
 					case 14:
-						{ return new Symbol(17); }
+						{ System.out.println(15); return new java_cup.runtime.Symbol(15); }
 					case -15:
 						break;
 					case 15:
-						{ return new Symbol(14); }
+						{ System.out.println(12); return new java_cup.runtime.Symbol(12); }
 					case -16:
 						break;
 					case 16:
-						{ return new Symbol(16); }
+						{ System.out.println(14); return new java_cup.runtime.Symbol(14); }
 					case -17:
 						break;
 					case 17:
-						{ return new Symbol(15); }
+						{ System.out.println(13); return new java_cup.runtime.Symbol(13); }
 					case -18:
 						break;
 					case 18:
-						{ return new Symbol(19); }
+						{ System.out.println(17); return new java_cup.runtime.Symbol(17); }
 					case -19:
 						break;
 					case 19:
-						{return new Symbol(25); }
+						{System.out.println(26); return new java_cup.runtime.Symbol(26, yytext()); }
 					case -20:
 						break;
 					case 20:
-						{ return new Symbol(4); }
+						{ System.out.println(2); return new java_cup.runtime.Symbol(2); }
 					case -21:
 						break;
 					case 21:
-						{ return new Symbol(2); }
+						{ System.out.println(24); return new java_cup.runtime.Symbol(24, yytext()); }
 					case -22:
 						break;
 					case 22:
-						{ return new Symbol(24); }
+						{ System.out.println(22); return new java_cup.runtime.Symbol(22); }
 					case -23:
 						break;
 					case 23:
-						{ return new Symbol(23); }
+						{ System.out.println(21); return new java_cup.runtime.Symbol(21); }
 					case -24:
 						break;
 					case 24:
-						{ return new Symbol(22); }
+						{ System.out.println(20); return new java_cup.runtime.Symbol(20); }
 					case -25:
 						break;
 					case 25:
-						{yybegin($$$$);}
+						{ yybegin($$$$);}
 					case -26:
 						break;
 					case 26:
-						{ return new Symbol(10); }
+						{ System.out.println(8); return new java_cup.runtime.Symbol(8); }
 					case -27:
 						break;
 					case 27:
-						{ return new Symbol(12); }
+						{ System.out.println(10); return new java_cup.runtime.Symbol(10); }
 					case -28:
 						break;
 					case 28:
-						{ return new Symbol(13); }
+						{ System.out.println(11); return new java_cup.runtime.Symbol(11); }
 					case -29:
 						break;
 					case 29:
-						{ return new Symbol(7); }
+						{ System.out.println(5); return new java_cup.runtime.Symbol(5); }
 					case -30:
 						break;
 					case 30:
-						{ return new Symbol(5); }
+						{ System.out.println(3); return new java_cup.runtime.Symbol(3); }
 					case -31:
 						break;
 					case 31:
-						{ return new Symbol(11); }
+						{ System.out.println(9); return new java_cup.runtime.Symbol(9); }
 					case -32:
 						break;
 					case 32:
-						{ return new Symbol(6); }
+						{ System.out.println(4); return new java_cup.runtime.Symbol(4); }
 					case -33:
 						break;
 					case 33:
-						{ return new Symbol(9); }
+						{ System.out.println(7); return new java_cup.runtime.Symbol(7); }
 					case -34:
 						break;
 					case 34:
-						{ return new Symbol(8); }
+						{ System.out.println(6); return new java_cup.runtime.Symbol(6); }
 					case -35:
 						break;
 					case 35:
-						{ return new Symbol(26); }
+						{ System.out.println(23); return new java_cup.runtime.Symbol(23); }
 					case -36:
 						break;
 					case 37:
@@ -513,19 +514,19 @@ class A5Scanner {
 					case -37:
 						break;
 					case 38:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -38:
 						break;
 					case 39:
-						{ return new Symbol(1); }
+						{ System.out.println(1); return new java_cup.runtime.Symbol(1); }
 					case -39:
 						break;
 					case 40:
-						{return new Symbol(25); }
+						{System.out.println(26); return new java_cup.runtime.Symbol(26, yytext()); }
 					case -40:
 						break;
 					case 41:
-						{ return new Symbol(2); }
+						{ System.out.println(24); return new java_cup.runtime.Symbol(24, yytext()); }
 					case -41:
 						break;
 					case 43:
@@ -533,11 +534,11 @@ class A5Scanner {
 					case -42:
 						break;
 					case 44:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -43:
 						break;
 					case 45:
-						{ return new Symbol(1); }
+						{ System.out.println(1); return new java_cup.runtime.Symbol(1); }
 					case -44:
 						break;
 					case 47:
@@ -545,11 +546,11 @@ class A5Scanner {
 					case -45:
 						break;
 					case 48:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -46:
 						break;
 					case 49:
-						{ return new Symbol(1); }
+						{ System.out.println(1); return new java_cup.runtime.Symbol(1); }
 					case -47:
 						break;
 					case 51:
@@ -557,35 +558,35 @@ class A5Scanner {
 					case -48:
 						break;
 					case 52:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -49:
 						break;
 					case 53:
-						{ return new Symbol(1); }
+						{ System.out.println(1); return new java_cup.runtime.Symbol(1); }
 					case -50:
 						break;
 					case 55:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -51:
 						break;
 					case 57:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -52:
 						break;
 					case 59:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -53:
 						break;
 					case 61:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -54:
 						break;
 					case 63:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -55:
 						break;
 					case 65:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -56:
 						break;
 					case 69:
@@ -593,75 +594,75 @@ class A5Scanner {
 					case -57:
 						break;
 					case 70:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -58:
 						break;
 					case 71:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -59:
 						break;
 					case 72:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -60:
 						break;
 					case 73:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -61:
 						break;
 					case 74:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -62:
 						break;
 					case 75:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -63:
 						break;
 					case 76:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -64:
 						break;
 					case 77:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -65:
 						break;
 					case 78:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -66:
 						break;
 					case 79:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -67:
 						break;
 					case 80:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -68:
 						break;
 					case 81:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -69:
 						break;
 					case 82:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -70:
 						break;
 					case 83:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -71:
 						break;
 					case 84:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -72:
 						break;
 					case 85:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -73:
 						break;
 					case 86:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -74:
 						break;
 					case 87:
-						{ return new Symbol(3); }
+						{ System.out.println(25); return new java_cup.runtime.Symbol(25, yytext()); }
 					case -75:
 						break;
 					default:

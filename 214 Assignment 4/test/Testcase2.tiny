@@ -1,0 +1,7 @@
+/** Test case 2 iilegal **/
+INT MAIN f()
+	BEGIN
+	INT x;
+	READ(x+2, " ");
+	WRITE(5, " ");
+	END

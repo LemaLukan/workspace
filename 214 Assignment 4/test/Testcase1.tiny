@@ -1,0 +1,10 @@
+/** Test case 1  illegal **/
+INT MAIN f()
+	BEGIN
+	INT x;
+	~
+	~
+	~
+	~
+	~
+	END

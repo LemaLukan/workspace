@@ -1,0 +1,11 @@
+/** Test case 5 **/
+INT MAIN f()
+	BEGIN
+	INT x;
+	x := 5;
+	BEGIN
+		INT z;
+		READ(x, " ");
+	WRITE(z+x*34, " ");
+	END
+	END
